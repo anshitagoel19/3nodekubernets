@@ -1,0 +1,3114 @@
+Last login: Tue Dec 29 02:45:01 on ttys004
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MacBook-Air:~ anshitagoel$ ssh -i ~/.ssh/ubuntu ubuntu@52.149.196.225
+Warning: Identity file /Users/anshitagoel/.ssh/ubuntu not accessible: No such file or directory.
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Dec 28 21:17:29 UTC 2020
+
+  System load:  0.02              Processes:           130
+  Usage of /:   4.5% of 28.90GB   Users logged in:     1
+  Memory usage: 2%                IP address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '20.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Mon Dec 28 21:15:16 2020 from 116.74.25.198
+ubuntu@Master:~$ apt-get update && apt-get install -y docker.io
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+ubuntu@Master:~$ docker --version
+
+Command 'docker' not found, but can be installed with:
+
+sudo snap install docker     # version 19.03.11, or
+sudo apt  install docker.io
+
+See 'snap info docker' for additional versions.
+
+ubuntu@Master:~$ snap info docker
+name:      docker
+summary:   Docker container runtime
+publisher: Canonical✓
+store-url: https://snapcraft.io/docker
+contact:   https://github.com/docker-snap/docker-snap/issues?q=
+license:   Apache-2.0
+description: |
+  Build and run container images with Docker.
+  
+  This build requires all files that Docker uses, such as dockerfiles, to be in $HOME. Keep files
+  there for 'docker build', 'docker save' and 'docker load'.
+  
+  This snap is built by Canonical based on source code published by Docker, Inc. It is not endorsed
+  or published by Docker, Inc.
+  
+  Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United
+  States and/or other countries. Docker, Inc. and other parties may also have trademark rights in
+  other terms used herein.
+snap-id: sLCsFAO8PKM5Z0fAKNszUOX0YASjQfeZ
+channels:
+  latest/stable:    19.03.11     2020-06-09 (471) 131MB -
+  latest/candidate: 19.03.11     2020-06-09 (471) 131MB -
+  latest/beta:      19.03.13     2020-11-18 (650) 133MB -
+  latest/edge:      19.03.13     2020-12-26 (752) 133MB -
+  17.03/stable:     17.03.2-ce-1 2017-07-20 (159)  42MB -
+  17.03/candidate:  17.03.2-ce-1 2017-06-30 (159)  42MB -
+  17.03/beta:       ↑                                   
+  17.03/edge:       17.03.2-ce-1 2017-06-30 (159)  42MB -
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# apt-get update && apt-get install -y apt-transport-https
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]     
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]           
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]    
+Get:8 http://azure.archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [1790 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [376 kB]
+Get:11 http://azure.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [206 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [27.9 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1697 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [357 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [35.6 kB]
+Get:16 http://azure.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [7180 B]
+Get:17 http://azure.archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [10.0 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [4764 B]
+Get:19 http://azure.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [10.3 kB]
+Get:20 http://azure.archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [4588 B]
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [1453 kB]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [284 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [185 kB]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [24.3 kB]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1094 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [244 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [12.8 kB]
+Get:28 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [2872 B]
+Fetched 21.8 MB in 5s (4813 kB/s)                           
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  linux-headers-4.15.0-124
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Need to get 1696 B of archives.
+After this operation, 153 kB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12ubuntu0.2 [1696 B]
+Fetched 1696 B in 0s (0 B/s)                  
+Selecting previously unselected package apt-transport-https.
+(Reading database ... 76696 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_1.6.12ubuntu0.2_all.deb ...
+Unpacking apt-transport-https (1.6.12ubuntu0.2) ...
+Setting up apt-transport-https (1.6.12ubuntu0.2) ...
+root@Master:/home/ubuntu# curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+OK
+root@Master:/home/ubuntu# cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+>  deb https://apt.kubernetes.io/ kubernetes-xenial main
+>  EOF
+> deb https://apt.kubernetes.io/ kubernetes-xenial main
+> cat
+> 
+> root@Master:/home/ubuntu# cat
+> apt-get update
+> 
+> \
+> >>
+> $
+> EOF
+ deb https://apt.kubernetes.io/ kubernetes-xenial main
+ EOF
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+cat
+
+root@Master:/home/ubuntu# cat
+apt-get update
+
+>>
+$
+root@Master:/home/ubuntu# cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+> deb https://apt.kubernetes.io/ kubernetes-xenial main
+> EOF
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+root@Master:/home/ubuntu# apt-get update
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease               
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9383 B]         
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [43.3 kB]
+Fetched 52.7 kB in 1s (94.5 kB/s)   
+Reading package lists... Done
+root@Master:/home/ubuntu# apt-get install -y kubelet kubeadm kubectl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  linux-headers-4.15.0-124
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  conntrack cri-tools kubernetes-cni socat
+The following NEW packages will be installed:
+  conntrack cri-tools kubeadm kubectl kubelet kubernetes-cni socat
+0 upgraded, 7 newly installed, 0 to remove and 14 not upgraded.
+Need to get 68.7 MB of archives.
+After this operation, 293 MB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 conntrack amd64 1:1.4.4+snapshot20161117-6ubuntu2 [30.6 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 socat amd64 1.7.3.2-2ubuntu2 [342 kB]
+Get:3 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.13.0-01 [8775 kB]
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 0.8.7-00 [25.0 MB]
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.20.1-00 [18.9 MB]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.20.1-00 [7948 kB]
+Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.20.1-00 [7708 kB]
+Fetched 68.7 MB in 3s (21.9 MB/s) 
+Selecting previously unselected package conntrack.
+(Reading database ... 76700 files and directories currently installed.)
+Preparing to unpack .../0-conntrack_1%3a1.4.4+snapshot20161117-6ubuntu2_amd64.deb ...
+Unpacking conntrack (1:1.4.4+snapshot20161117-6ubuntu2) ...
+Selecting previously unselected package cri-tools.
+Preparing to unpack .../1-cri-tools_1.13.0-01_amd64.deb ...
+Unpacking cri-tools (1.13.0-01) ...
+Selecting previously unselected package kubernetes-cni.
+Preparing to unpack .../2-kubernetes-cni_0.8.7-00_amd64.deb ...
+Unpacking kubernetes-cni (0.8.7-00) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../3-socat_1.7.3.2-2ubuntu2_amd64.deb ...
+Unpacking socat (1.7.3.2-2ubuntu2) ...
+Selecting previously unselected package kubelet.
+Preparing to unpack .../4-kubelet_1.20.1-00_amd64.deb ...
+Unpacking kubelet (1.20.1-00) ...
+Selecting previously unselected package kubectl.
+Preparing to unpack .../5-kubectl_1.20.1-00_amd64.deb ...
+Unpacking kubectl (1.20.1-00) ...
+Selecting previously unselected package kubeadm.
+Preparing to unpack .../6-kubeadm_1.20.1-00_amd64.deb ...
+Unpacking kubeadm (1.20.1-00) ...
+Setting up conntrack (1:1.4.4+snapshot20161117-6ubuntu2) ...
+Setting up kubernetes-cni (0.8.7-00) ...
+Setting up cri-tools (1.13.0-01) ...
+Setting up socat (1.7.3.2-2ubuntu2) ...
+Setting up kubelet (1.20.1-00) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+Setting up kubectl (1.20.1-00) ...
+Setting up kubeadm (1.20.1-00) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+root@Master:/home/ubuntu# apt-get update
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease       
+Hit:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease     
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9383 B]                      
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease        
+Fetched 9383 B in 0s (18.9 kB/s)                   
+Reading package lists... Done
+root@Master:/home/ubuntu# apt-mark hold kubelet kubeadm kubectl
+kubelet set on hold.
+kubeadm set on hold.
+kubectl set on hold.
+root@Master:/home/ubuntu# kubeadm init
+W1228 21:48:08.189457   19216 kubelet.go:200] cannot automatically set CgroupDriver when starting the Kubelet: cannot execute 'docker info -f {{.CgroupDriver}}': executable file not found in $PATH
+[init] Using Kubernetes version: v1.20.1
+[preflight] Running pre-flight checks
+[preflight] WARNING: Couldn't create the interface used for talking to the container runtime: docker is required for container runtime: exec: "docker": executable file not found in $PATH
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+	[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+root@Master:/home/ubuntu# kubeadm init --cri-socket /var/run/crio/crio.sock
+[init] Using Kubernetes version: v1.20.1
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR CRI]: container runtime is not running: output: NAME:
+   crictl info - Display information of the container runtime
+
+USAGE:
+   crictl info [command options] [arguments...]
+
+OPTIONS:
+   --output value, -o value  Output format, One of: json|yaml (default: "json")
+   
+time="2020-12-28T21:52:42Z" level=fatal msg="failed to connect: failed to connect: context deadline exceeded"
+, error: exit status 1
+	[ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+	[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+root@Master:/home/ubuntu# echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs" >> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+> echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs" >> 
+bash: syntax error near unexpected token `newline'
+root@Master:/home/ubuntu# echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs" >> 
+> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+> echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs" >> 
+bash: syntax error near unexpected token `newline'
+root@Master:/home/ubuntu#  echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs"
+> >> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+> EOF
+> echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs"
+Environment=KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs
+>> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+EOF
+echo Environment=KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs
+root@Master:/home/ubuntu# cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+# Note: This dropin only works with kubeadm and kubelet v1.11+
+[Service]
+Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf"
+Environment="KUBELET_CONFIG_ARGS=--config=/var/lib/kubelet/config.yaml"
+# This is a file that "kubeadm init" and "kubeadm join" generates at runtime, populating the KUBELET_KUBEADM_ARGS variable dynamically
+EnvironmentFile=-/var/lib/kubelet/kubeadm-flags.env
+# This is a file that the user can use for overrides of the kubelet args as a last resort. Preferably, the user should use
+# the .NodeRegistration.KubeletExtraArgs object in the configuration files instead. KUBELET_EXTRA_ARGS should be sourced from this file.
+EnvironmentFile=-/etc/default/kubelet
+ExecStart=
+ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS
+root@Master:/home/ubuntu# systemctl restart kubelet
+root@Master:/home/ubuntu# systemctl daemon-reload
+root@Master:/home/ubuntu# echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs"" >> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+root@Master:/home/ubuntu#  systemctl daemon-reload
+root@Master:/home/ubuntu# kubeadm init
+W1228 22:28:02.558003   27720 kubelet.go:200] cannot automatically set CgroupDriver when starting the Kubelet: cannot execute 'docker info -f {{.CgroupDriver}}': executable file not found in $PATH
+[init] Using Kubernetes version: v1.20.1
+[preflight] Running pre-flight checks
+[preflight] WARNING: Couldn't create the interface used for talking to the container runtime: docker is required for container runtime: exec: "docker": executable file not found in $PATH
+error execution phase preflight: [preflight] Some fatal errors occurred:
+	[ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+	[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+root@Master:/home/ubuntu# apt  install docker.io
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  linux-headers-4.15.0-124
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  bridge-utils cgroupfs-mount containerd pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools debootstrap docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils cgroupfs-mount containerd docker.io pigz runc ubuntu-fan
+0 upgraded, 7 newly installed, 0 to remove and 14 not upgraded.
+Need to get 63.7 MB of archives.
+After this operation, 319 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 bridge-utils amd64 1.5-15ubuntu1 [30.1 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 runc amd64 1.0.0~rc10-0ubuntu1~18.04.2 [2000 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 containerd amd64 1.3.3-0ubuntu1~18.04.2 [21.7 MB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 docker.io amd64 19.03.6-0ubuntu1~18.04.2 [39.9 MB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ubuntu-fan all 0.12.10 [34.7 kB]
+Fetched 63.7 MB in 1s (57.0 MB/s)      
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 76774 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.5-15ubuntu1_amd64.deb ...
+Unpacking bridge-utils (1.5-15ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../3-runc_1.0.0~rc10-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking runc (1.0.0~rc10-0ubuntu1~18.04.2) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../4-containerd_1.3.3-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking containerd (1.3.3-0ubuntu1~18.04.2) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../5-docker.io_19.03.6-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking docker.io (19.03.6-0ubuntu1~18.04.2) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../6-ubuntu-fan_0.12.10_all.deb ...
+Unpacking ubuntu-fan (0.12.10) ...
+Setting up runc (1.0.0~rc10-0ubuntu1~18.04.2) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up containerd (1.3.3-0ubuntu1~18.04.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up bridge-utils (1.5-15ubuntu1) ...
+Setting up ubuntu-fan (0.12.10) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+Setting up pigz (2.4-1) ...
+Setting up docker.io (19.03.6-0ubuntu1~18.04.2) ...
+Adding group `docker' (GID 116) ...
+Done.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+docker.service is a disabled or a static unit, not starting it.
+Processing triggers for systemd (237-3ubuntu10.43) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+root@Master:/home/ubuntu# kubeadm init
+[init] Using Kubernetes version: v1.20.1
+[preflight] Running pre-flight checks
+	[WARNING Service-Docker]: docker service is not enabled, please run 'systemctl enable docker.service'
+	[WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local master] and IPs [10.96.0.1 10.0.0.4]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [localhost master] and IPs [10.0.0.4 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [localhost master] and IPs [10.0.0.4 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Starting the kubelet
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[apiclient] All control plane components are healthy after 34.002804 seconds
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config-1.20" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Skipping phase. Please see --upload-certs
+[mark-control-plane] Marking the node master as control-plane by adding the labels "node-role.kubernetes.io/master=''" and "node-role.kubernetes.io/control-plane='' (deprecated)"
+[mark-control-plane] Marking the node master as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+[bootstrap-token] Using token: h5f4yg.ohh4d941d71bd6af
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 10.0.0.4:6443 --token h5f4yg.ohh4d941d71bd6af \
+    --discovery-token-ca-cert-hash sha256:12ea4109ff769eb9ecc3f270593e3983a39b27bd2bd28b8f1eb392b68f7f8e5f 
+root@Master:/home/ubuntu# client_loop: send disconnect: Broken pipe
+MacBook-Air:~ anshitagoel$ ssh ubuntu@52.149.196.225
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec 29 09:17:21 UTC 2020
+
+  System load:  0.35               Processes:              154
+  Usage of /:   10.8% of 28.90GB   Users logged in:        1
+  Memory usage: 12%                IP address for eth0:    10.0.0.4
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+4 packages can be updated.
+0 updates are security updates.
+
+New release '20.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Tue Dec 29 09:05:54 2020 from 116.75.201.206
+ubuntu@Master:~$ cp /etc/kubernetes/admin.conf $HOME/
+cp: cannot open '/etc/kubernetes/admin.conf' for reading: Permission denied
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# kubectl get nodes
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# cp /etc/kubernetes/admin.conf $HOME/
+root@Master:/home/ubuntu# chown $(id -u):$(id -g) $HOME/admin.conf
+root@Master:/home/ubuntu# export KUBECONFIG=$HOME/admin.conf
+root@Master:/home/ubuntu# kubectl get nodes
+NAME       STATUS     ROLES                  AGE   VERSION
+master     NotReady   control-plane,master   11h   v1.20.1
+worker01   NotReady   <none>                 36m   v1.20.1
+worker02   NotReady   <none>                 11h   v1.20.1
+root@Master:/home/ubuntu# client_loop: send disconnect: Broken pipe
+MacBook-Air:~ anshitagoel$ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64
+>  | tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+-bash: command substitution: line 2: syntax error near unexpected token `|'
+-bash: command substitution: line 2: ` | tr -d '\n''
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+MacBook-Air:~ anshitagoel$ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version| base64| tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+MacBook-Air:~ anshitagoel$ docker ps | grep kube-apiserver
+
+MacBook-Air:~ anshitagoel$ 
+MacBook-Air:~ anshitagoel$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+sudo: 3 incorrect password attempts
+MacBook-Air:~ anshitagoel$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+sudo: 3 incorrect password attempts
+MacBook-Air:~ anshitagoel$ kubectl cluster-info
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+MacBook-Air:~ anshitagoel$ kubectl cluster-info dump
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+MacBook-Air:~ anshitagoel$ kubectl config view
+apiVersion: v1
+clusters: null
+contexts: null
+current-context: ""
+kind: Config
+preferences: {}
+users: null
+MacBook-Air:~ anshitagoel$ gcloud container clusters get-credentials "CLUSTER NAME"
+-bash: gcloud: command not found
+MacBook-Air:~ anshitagoel$ kubertl create -f policy.yaml
+-bash: kubertl: command not found
+MacBook-Air:~ anshitagoel$ kubectl create -f policy.yaml
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+MacBook-Air:~ anshitagoel$ kubeadm init --kubernetes-version=v1.6.1 --pod-network-cidr=10.244.0.0/16
+-bash: kubeadm: command not found
+MacBook-Air:~ anshitagoel$ kubectl taint nodes --all node-role.kubernetes.io/master- 
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+MacBook-Air:~ anshitagoel$ ssh ubuntu@52.149.196.225
+ubuntu@52.149.196.225's password: 
+Permission denied, please try again.
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec 29 17:33:05 UTC 2020
+
+  System load:  0.05               Processes:              148
+  Usage of /:   11.0% of 28.90GB   Users logged in:        0
+  Memory usage: 12%                IP address for eth0:    10.0.0.4
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+4 packages can be updated.
+0 updates are security updates.
+
+New release '20.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Tue Dec 29 09:17:22 2020 from 116.75.201.206
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version| base64| tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# kubeadm init --kubernetes-version=v1.6.1 --pod-network-cidr=10.244.0.0/16
+this version of kubeadm only supports deploying clusters with the control plane version >= 1.19.0. Current version: v1.6.1
+To see the stack trace of this error execute with --v=5 or higher
+root@Master:/home/ubuntu# kubectl taint nodes --all node-role.kubernetes.io/master-
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# sudo cp /etc/kubernetes/admin.conf $HOME/
+root@Master:/home/ubuntu# sudo chown $(id -u):$(id -g) $HOME/admin.conf
+root@Master:/home/ubuntu# export KUBECONFIG=$HOME/admin.conf
+root@Master:/home/ubuntu# sudo su
+root@Master:/home/ubuntu# client_loop: send disconnect: Broken pipe
+MacBook-Air:~ anshitagoel$ ssh ubuntu@52.149.196.225
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec 29 19:05:32 UTC 2020
+
+  System load:  0.21               Processes:              149
+  Usage of /:   11.1% of 28.90GB   Users logged in:        0
+  Memory usage: 12%                IP address for eth0:    10.0.0.4
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+4 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Tue Dec 29 17:33:06 2020 from 116.75.240.17
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# openssl req -newkey rsa:4096 \
+>  -keyout cni.key \
+>            -nodes \
+>            -out cni.csr \
+> subj "/CN=calico-cni"
+req: Use -help for summary.
+root@Master:/home/ubuntu# openssl req -newkey rsa:4096 \
+> keyout cni.key \
+> nodes \
+> out cni.csr \
+> subj "/CN=calico-cni"
+req: Use -help for summary.
+root@Master:/home/ubuntu# -help
+
+Command '-help' not found, did you mean:
+
+  command 'dhelp' from deb dhelp
+
+Try: apt install <deb name>
+
+root@Master:/home/ubuntu# sudo openssl x509 -req -in cni.csr \
+>                   -CA /etc/kubernetes/pki/ca.crt \
+>                   -CAkey /etc/kubernetes/pki/ca.key \
+>                   -CAcreateserial \
+>                   -out cni.crt \
+>                   -days 365
+Can't open cni.csr for reading, No such file or directory
+139905576407488:error:02001002:system library:fopen:No such file or directory:../crypto/bio/bss_file.c:72:fopen('cni.csr','r')
+139905576407488:error:2006D080:BIO routines:BIO_new_file:no such file:../crypto/bio/bss_file.c:79:
+root@Master:/home/ubuntu# sudo chown ubuntu:ubuntu cni.crt
+chown: cannot access 'cni.crt': No such file or directory
+root@Master:/home/ubuntu# openssl req -newkey rsa:4096 \
+>            -keyout cni.key \
+>            -nodes \
+>            -out cni.csr \
+>            -subj "/CN=calico-cni"
+Can't load /root/.rnd into RNG
+140707185877440:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/root/.rnd
+Generating a RSA private key
+...............................++++
+.................................++++
+writing new private key to 'cni.key'
+-----
+root@Master:/home/ubuntu# sudo openssl x509 -req -in cni.csr \
+>                   -CA /etc/kubernetes/pki/ca.crt \
+>                   -CAkey /etc/kubernetes/pki/ca.key \
+>                   -CAcreateserial \
+>                   -out cni.crt \
+>                   -days 365
+Signature ok
+subject=CN = calico-cni
+Getting CA Private Key
+root@Master:/home/ubuntu# sudo chown ubuntu:ubuntu cni.crt
+root@Master:/home/ubuntu# APISERVER=$(kubectl config view -o jsonpath='{.clusters[0].cluster.server}')
+root@Master:/home/ubuntu# kubectl config set-cluster kubernetes \
+>     --certificate-authority=/etc/kubernetes/pki/ca.crt \
+>     --embed-certs=true \
+>     --server=$APISERVER \
+>     --kubeconfig=cni.kubeconfig
+Cluster "kubernetes" set.
+root@Master:/home/ubuntu# 
+root@Master:/home/ubuntu# kubectl config set-credentials calico-cni \
+>     --client-certificate=cni.crt \
+>     --client-key=cni.key \
+>     --embed-certs=true \
+>     --kubeconfig=cni.kubeconfig
+User "calico-cni" set.
+root@Master:/home/ubuntu# 
+root@Master:/home/ubuntu# kubectl config set-context default \
+>     --cluster=kubernetes \
+>     --user=calico-cni \
+>     --kubeconfig=cni.kubeconfig
+Context "default" created.
+root@Master:/home/ubuntu# 
+root@Master:/home/ubuntu# kubectl config use-context default --kubeconfig=cni.kubeconfig
+Switched to context "default".
+root@Master:/home/ubuntu# kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64
+> | tr -d '\n')"
+bash: command substitution: line 52: syntax error near unexpected token `|'
+bash: command substitution: line 52: `| tr -d '\n')"'
+root@Master:/home/ubuntu# kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64| tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# kubectl apply -f - <<EOF
+> kind: ClusterRole
+> apiVersion: rbac.authorization.k8s.io/v1
+> metadata:
+>   name: calico-cni
+> rules:
+>   # The CNI plugin needs to get pods, nodes, and namespaces.
+>   - apiGroups: [""]
+>     resources:
+>       - pods
+>       - nodes
+>       - namespaces
+>     verbs:
+>       - get
+>   # The CNI plugin patches pods/status.
+>   - apiGroups: [""]
+>     resources:
+>       - pods/status
+>     verbs:
+>       - patch
+>  # These permissions are required for Calico CNI to perform IPAM allocations.
+>   - apiGroups: ["crd.projectcalico.org"]
+>     resources:
+>       - blockaffinities
+>       - ipamblocks
+>       - ipamhandles
+>     verbs:
+>       - get
+>       - list
+>       - create
+>       - update
+>       - delete
+>   - apiGroups: ["crd.projectcalico.org"]
+>     resources:
+>       - ipamconfigs
+>       - clusterinformations
+>       - ippools
+>     verbs:
+>       - get
+>       - list
+> EOF
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# kubectl create clusterrolebinding calico-cni --clusterrole=calico-cni --user=calico-cni
+error: failed to create clusterrolebinding: Post "http://localhost:8080/apis/rbac.authorization.k8s.io/v1/clusterrolebindings?fieldManager=kubectl-create": dial tcp 127.0.0.1:8080: connect: connection refused
+root@Master:/home/ubuntu# curl -L -o /opt/cni/bin/calico https://github.com/projectcalico/cni-plugin/releases/download/v3.14.0/calico-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   636  100   636    0     0   5300      0 --:--:-- --:--:-- --:--:--  5300
+100 37.7M  100 37.7M    0     0  64.9M      0 --:--:-- --:--:-- --:--:-- 64.9M
+root@Master:/home/ubuntu# chmod 755 /opt/cni/bin/calico
+root@Master:/home/ubuntu# curl -L -o /opt/cni/bin/calico-ipam https://github.com/projectcalico/cni-plugin/releases/download/v3.14.0/calico-ipam-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   641  100   641    0     0   6410      0 --:--:-- --:--:-- --:--:--  6410
+100 36.8M  100 36.8M    0     0  64.7M      0 --:--:-- --:--:-- --:--:--  111M
+root@Master:/home/ubuntu# chmod 755 /opt/cni/bin/calico-ipam
+root@Master:/home/ubuntu# mkdir -p /etc/cni/net.d/
+root@Master:/home/ubuntu# cp cni.kubeconfig /etc/cni/net.d/calico-kubeconfig
+root@Master:/home/ubuntu# chmod 600 /etc/cni/net.d/calico-kubeconfig
+root@Master:/home/ubuntu# cat > /etc/cni/net.d/10-calico.conflist <<EOF
+> {
+>   "name": "k8s-pod-network",
+>   "cniVersion": "0.3.1",
+>   "plugins": [
+>     {
+>       "type": "calico",
+>       "log_level": "info",
+>       "datastore_type": "kubernetes",
+>       "mtu": 1500,
+>       "ipam": {
+>           "type": "calico-ipam"
+>       },
+>       "policy": {
+>           "type": "k8s"
+>       },
+>       "kubernetes": {
+>           "kubeconfig": "/etc/cni/net.d/calico-kubeconfig"
+>       }
+>     },
+>     {
+>       "type": "portmap",
+>       "snat": true,
+>       "capabilities": {"portMappings": true}
+>     }
+>   ]
+> }
+> EOF
+root@Master:/home/ubuntu# kubectl get nodes
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# exit
+exit
+ubuntu@Master:~$ kubectl get nodes
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu#  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64| tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@Master:/home/ubuntu# exit
+exit
+ubuntu@Master:~$  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64| tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+ubuntu@Master:~$ kubectl get pods -n kube-system
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+ubuntu@Master:~$ cp /etc/kubernetes/admin.conf $HOME/
+cp: cannot open '/etc/kubernetes/admin.conf' for reading: Permission denied
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# cp /etc/kubernetes/admin.conf $HOME/
+root@Master:/home/ubuntu# chown $(id -u):$(id -g) $HOME/admin.conf
+root@Master:/home/ubuntu# export KUBECONFIG=$HOME/admin.conf
+root@Master:/home/ubuntu# kubectl get nodes
+NAME       STATUS     ROLES                  AGE   VERSION
+master     Ready      control-plane,master   20h   v1.20.1
+worker01   NotReady   <none>                 10h   v1.20.1
+worker02   NotReady   <none>                 20h   v1.20.1
+root@Master:/home/ubuntu# kubectl get nodes
+NAME       STATUS     ROLES                  AGE   VERSION
+master     Ready      control-plane,master   20h   v1.20.1
+worker01   NotReady   <none>                 10h   v1.20.1
+worker02   Ready      <none>                 20h   v1.20.1
+root@Master:/home/ubuntu# kubectl get nodes
+NAME       STATUS     ROLES                  AGE   VERSION
+master     Ready      control-plane,master   20h   v1.20.1
+worker01   NotReady   <none>                 10h   v1.20.1
+worker02   Ready      <none>                 20h   v1.20.1
+root@Master:/home/ubuntu# kubectl get nodes
+NAME       STATUS   ROLES                  AGE   VERSION
+master     Ready    control-plane,master   20h   v1.20.1
+worker01   Ready    <none>                 10h   v1.20.1
+worker02   Ready    <none>                 20h   v1.20.1
+root@Master:/home/ubuntu# kubectl get pods -n kube-system
+NAME                             READY   STATUS              RESTARTS   AGE
+coredns-74ff55c5b-gdxlb          0/1     ContainerCreating   0          21h
+coredns-74ff55c5b-l9nwm          0/1     ContainerCreating   0          21h
+etcd-master                      1/1     Running             0          21h
+kube-apiserver-master            1/1     Running             0          21h
+kube-controller-manager-master   1/1     Running             0          21h
+kube-proxy-4crbv                 1/1     Running             0          20h
+kube-proxy-9fzhw                 1/1     Running             0          10h
+kube-proxy-srgqm                 1/1     Running             0          21h
+kube-scheduler-master            1/1     Running             0          21h
+root@Master:/home/ubuntu#  brew install kubernetes-helm
+
+Command 'brew' not found, but can be installed with:
+
+apt install linuxbrew-wrapper
+
+root@Master:/home/ubuntu# apt install linuxbrew-wrapper
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential cpp cpp-7 dpkg-dev fakeroot fonts-lato g++ g++-7 gcc gcc-7 gcc-7-base javascript-common libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan4 libatomic1 libbinutils libc-dev-bin libc6 libc6-dev libcc1-0 libcilkrts5 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-7-dev
+  libgomp1 libisl19 libitm1 libjs-jquery liblsan0 libmpc3 libmpx2 libquadmath0 libruby2.5 libstdc++-7-dev libtsan0 libubsan0 linux-libc-dev make manpages-dev python-pkg-resources python-setuptools rake
+  ruby ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert ruby-test-unit ruby2.5 rubygems-integration unzip zip
+Suggested packages:
+  binutils-doc cpp-doc gcc-7-locales debian-keyring g++-multilib g++-7-multilib gcc-7-doc libstdc++6-7-dbg gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-7-multilib libgcc1-dbg
+  libgomp1-dbg libitm1-dbg libatomic1-dbg libasan4-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx2-dbg libquadmath0-dbg apache2 | lighttpd | httpd glibc-doc bzr libstdc++-7-doc
+  make-doc python-setuptools-doc ri ruby-dev bundler
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential cpp cpp-7 dpkg-dev fakeroot fonts-lato g++ g++-7 gcc gcc-7 gcc-7-base javascript-common libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan4 libatomic1 libbinutils libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-7-dev libgomp1
+  libisl19 libitm1 libjs-jquery liblsan0 libmpc3 libmpx2 libquadmath0 libruby2.5 libstdc++-7-dev libtsan0 libubsan0 linux-libc-dev linuxbrew-wrapper make manpages-dev python-pkg-resources
+  python-setuptools rake ruby ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert ruby-test-unit ruby2.5 rubygems-integration unzip zip
+The following packages will be upgraded:
+  libc6
+1 upgraded, 58 newly installed, 0 to remove and 6 not upgraded.
+Need to get 52.8 MB of archives.
+After this operation, 196 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-lato all 2.0-2 [2698 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc6 amd64 2.27-3ubuntu1.4 [2832 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-common amd64 2.30-21ubuntu1~18.04.4 [196 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbinutils amd64 2.30-21ubuntu1~18.04.4 [488 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.30-21ubuntu1~18.04.4 [1839 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils amd64 2.30-21ubuntu1~18.04.4 [3392 B]
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc-dev-bin amd64 2.27-3ubuntu1.4 [71.8 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-128.131 [989 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc6-dev amd64 2.27-3ubuntu1.4 [2585 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc-7-base amd64 7.5.0-3ubuntu1~18.04 [18.3 kB]
+Get:11 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libisl19 amd64 0.19-1 [551 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 cpp-7 amd64 7.5.0-3ubuntu1~18.04 [8591 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 cpp amd64 4:7.4.0-1ubuntu2.3 [27.7 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcc1-0 amd64 8.4.0-1ubuntu1~18.04 [39.4 kB]
+Get:16 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgomp1 amd64 8.4.0-1ubuntu1~18.04 [76.5 kB]
+Get:17 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libitm1 amd64 8.4.0-1ubuntu1~18.04 [27.9 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libatomic1 amd64 8.4.0-1ubuntu1~18.04 [9192 B]
+Get:19 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasan4 amd64 7.5.0-3ubuntu1~18.04 [358 kB]
+Get:20 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblsan0 amd64 8.4.0-1ubuntu1~18.04 [133 kB]
+Get:21 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libtsan0 amd64 8.4.0-1ubuntu1~18.04 [288 kB]
+Get:22 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libubsan0 amd64 7.5.0-3ubuntu1~18.04 [126 kB]
+Get:23 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcilkrts5 amd64 7.5.0-3ubuntu1~18.04 [42.5 kB]
+Get:24 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmpx2 amd64 8.4.0-1ubuntu1~18.04 [11.6 kB]
+Get:25 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libquadmath0 amd64 8.4.0-1ubuntu1~18.04 [134 kB]
+Get:26 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgcc-7-dev amd64 7.5.0-3ubuntu1~18.04 [2378 kB]
+Get:27 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc-7 amd64 7.5.0-3ubuntu1~18.04 [9381 kB]
+Get:28 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc amd64 4:7.4.0-1ubuntu2.3 [5184 B]
+Get:29 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libstdc++-7-dev amd64 7.5.0-3ubuntu1~18.04 [1471 kB]
+Get:30 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 g++-7 amd64 7.5.0-3ubuntu1~18.04 [9697 kB]
+Get:31 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 g++ amd64 4:7.4.0-1ubuntu2.3 [1568 B]
+Get:32 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 make amd64 4.1-9.1ubuntu1 [154 kB]
+Get:33 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libdpkg-perl all 1.19.0.5ubuntu2.3 [211 kB]
+Get:34 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 dpkg-dev all 1.19.0.5ubuntu2.3 [607 kB]
+Get:35 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 build-essential amd64 12.4ubuntu1 [4758 B]
+Get:36 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libfakeroot amd64 1.22-2ubuntu1 [25.9 kB]
+Get:37 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 fakeroot amd64 1.22-2ubuntu1 [62.3 kB]
+Get:38 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 javascript-common all 11 [6066 B]
+Get:39 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libalgorithm-diff-perl all 1.19.03-1 [47.6 kB]
+Get:40 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libalgorithm-diff-xs-perl amd64 0.04-5 [11.1 kB]
+Get:41 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+Get:42 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libfile-fcntllock-perl amd64 0.22-3build2 [33.2 kB]
+Get:43 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libjs-jquery all 3.2.1-1 [152 kB]
+Get:44 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 rubygems-integration all 1.11 [4994 B]
+Get:45 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ruby2.5 amd64 2.5.1-1ubuntu1.7 [48.6 kB]
+Get:46 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ruby amd64 1:2.5.1 [5712 B]
+Get:47 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 rake all 12.3.1-1ubuntu0.1 [44.9 kB]
+Get:48 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ruby-did-you-mean all 1.2.0-2 [9700 B]
+Get:49 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ruby-minitest all 5.10.3-1 [38.6 kB]
+Get:50 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ruby-net-telnet all 0.1.1-2 [12.6 kB]
+Get:51 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ruby-power-assert all 0.3.0-1 [7952 B]
+Get:52 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ruby-test-unit all 3.2.5-1 [61.1 kB]
+Get:53 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libruby2.5 amd64 2.5.1-1ubuntu1.7 [3068 kB]
+Get:54 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 manpages-dev all 4.15-1 [2217 kB]
+Get:55 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 python-pkg-resources all 39.0.1-2 [128 kB]
+Get:56 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 python-setuptools all 39.0.1-2 [329 kB]
+Get:57 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 unzip amd64 6.0-21ubuntu1.1 [168 kB]
+Get:58 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 zip amd64 3.0-11build1 [167 kB]
+Get:59 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 linuxbrew-wrapper all 20170516-2 [13.6 kB]
+Fetched 52.8 MB in 2s (26.5 MB/s)               
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package fonts-lato.
+(Reading database ... 86044 files and directories currently installed.)
+Preparing to unpack .../fonts-lato_2.0-2_all.deb ...
+Unpacking fonts-lato (2.0-2) ...
+Preparing to unpack .../libc6_2.27-3ubuntu1.4_amd64.deb ...
+Unpacking libc6:amd64 (2.27-3ubuntu1.4) over (2.27-3ubuntu1.3) ...
+Setting up libc6:amd64 (2.27-3ubuntu1.4) ...
+Selecting previously unselected package binutils-common:amd64.
+(Reading database ... 86070 files and directories currently installed.)
+Preparing to unpack .../00-binutils-common_2.30-21ubuntu1~18.04.4_amd64.deb ...
+Unpacking binutils-common:amd64 (2.30-21ubuntu1~18.04.4) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../01-libbinutils_2.30-21ubuntu1~18.04.4_amd64.deb ...
+Unpacking libbinutils:amd64 (2.30-21ubuntu1~18.04.4) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../02-binutils-x86-64-linux-gnu_2.30-21ubuntu1~18.04.4_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.30-21ubuntu1~18.04.4) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../03-binutils_2.30-21ubuntu1~18.04.4_amd64.deb ...
+Unpacking binutils (2.30-21ubuntu1~18.04.4) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../04-libc-dev-bin_2.27-3ubuntu1.4_amd64.deb ...
+Unpacking libc-dev-bin (2.27-3ubuntu1.4) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../05-linux-libc-dev_4.15.0-128.131_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.15.0-128.131) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../06-libc6-dev_2.27-3ubuntu1.4_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.27-3ubuntu1.4) ...
+Selecting previously unselected package gcc-7-base:amd64.
+Preparing to unpack .../07-gcc-7-base_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking gcc-7-base:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package libisl19:amd64.
+Preparing to unpack .../08-libisl19_0.19-1_amd64.deb ...
+Unpacking libisl19:amd64 (0.19-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../09-libmpc3_1.1.0-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.1.0-1) ...
+Selecting previously unselected package cpp-7.
+Preparing to unpack .../10-cpp-7_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking cpp-7 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../11-cpp_4%3a7.4.0-1ubuntu2.3_amd64.deb ...
+Unpacking cpp (4:7.4.0-1ubuntu2.3) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../12-libcc1-0_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../13-libgomp1_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libgomp1:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../14-libitm1_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libitm1:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../15-libatomic1_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libatomic1:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libasan4:amd64.
+Preparing to unpack .../16-libasan4_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libasan4:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../17-liblsan0_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking liblsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../18-libtsan0_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libtsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../19-libubsan0_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libubsan0:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../20-libcilkrts5_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libcilkrts5:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package libmpx2:amd64.
+Preparing to unpack .../21-libmpx2_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libmpx2:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../22-libquadmath0_8.4.0-1ubuntu1~18.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Selecting previously unselected package libgcc-7-dev:amd64.
+Preparing to unpack .../23-libgcc-7-dev_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libgcc-7-dev:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package gcc-7.
+Preparing to unpack .../24-gcc-7_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking gcc-7 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../25-gcc_4%3a7.4.0-1ubuntu2.3_amd64.deb ...
+Unpacking gcc (4:7.4.0-1ubuntu2.3) ...
+Selecting previously unselected package libstdc++-7-dev:amd64.
+Preparing to unpack .../26-libstdc++-7-dev_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libstdc++-7-dev:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package g++-7.
+Preparing to unpack .../27-g++-7_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking g++-7 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../28-g++_4%3a7.4.0-1ubuntu2.3_amd64.deb ...
+Unpacking g++ (4:7.4.0-1ubuntu2.3) ...
+Selecting previously unselected package make.
+Preparing to unpack .../29-make_4.1-9.1ubuntu1_amd64.deb ...
+Unpacking make (4.1-9.1ubuntu1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../30-libdpkg-perl_1.19.0.5ubuntu2.3_all.deb ...
+Unpacking libdpkg-perl (1.19.0.5ubuntu2.3) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../31-dpkg-dev_1.19.0.5ubuntu2.3_all.deb ...
+Unpacking dpkg-dev (1.19.0.5ubuntu2.3) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../32-build-essential_12.4ubuntu1_amd64.deb ...
+Unpacking build-essential (12.4ubuntu1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../33-libfakeroot_1.22-2ubuntu1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.22-2ubuntu1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../34-fakeroot_1.22-2ubuntu1_amd64.deb ...
+Unpacking fakeroot (1.22-2ubuntu1) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../35-javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../36-libalgorithm-diff-perl_1.19.03-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../37-libalgorithm-diff-xs-perl_0.04-5_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-5) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../38-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../39-libfile-fcntllock-perl_0.22-3build2_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build2) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../40-libjs-jquery_3.2.1-1_all.deb ...
+Unpacking libjs-jquery (3.2.1-1) ...
+Selecting previously unselected package rubygems-integration.
+Preparing to unpack .../41-rubygems-integration_1.11_all.deb ...
+Unpacking rubygems-integration (1.11) ...
+Selecting previously unselected package ruby2.5.
+Preparing to unpack .../42-ruby2.5_2.5.1-1ubuntu1.7_amd64.deb ...
+Unpacking ruby2.5 (2.5.1-1ubuntu1.7) ...
+Selecting previously unselected package ruby.
+Preparing to unpack .../43-ruby_1%3a2.5.1_amd64.deb ...
+Unpacking ruby (1:2.5.1) ...
+Selecting previously unselected package rake.
+Preparing to unpack .../44-rake_12.3.1-1ubuntu0.1_all.deb ...
+Unpacking rake (12.3.1-1ubuntu0.1) ...
+Selecting previously unselected package ruby-did-you-mean.
+Preparing to unpack .../45-ruby-did-you-mean_1.2.0-2_all.deb ...
+Unpacking ruby-did-you-mean (1.2.0-2) ...
+Selecting previously unselected package ruby-minitest.
+Preparing to unpack .../46-ruby-minitest_5.10.3-1_all.deb ...
+Unpacking ruby-minitest (5.10.3-1) ...
+Selecting previously unselected package ruby-net-telnet.
+Preparing to unpack .../47-ruby-net-telnet_0.1.1-2_all.deb ...
+Unpacking ruby-net-telnet (0.1.1-2) ...
+Selecting previously unselected package ruby-power-assert.
+Preparing to unpack .../48-ruby-power-assert_0.3.0-1_all.deb ...
+Unpacking ruby-power-assert (0.3.0-1) ...
+Selecting previously unselected package ruby-test-unit.
+Preparing to unpack .../49-ruby-test-unit_3.2.5-1_all.deb ...
+Unpacking ruby-test-unit (3.2.5-1) ...
+Selecting previously unselected package libruby2.5:amd64.
+Preparing to unpack .../50-libruby2.5_2.5.1-1ubuntu1.7_amd64.deb ...
+Unpacking libruby2.5:amd64 (2.5.1-1ubuntu1.7) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../51-manpages-dev_4.15-1_all.deb ...
+Unpacking manpages-dev (4.15-1) ...
+Selecting previously unselected package python-pkg-resources.
+Preparing to unpack .../52-python-pkg-resources_39.0.1-2_all.deb ...
+Unpacking python-pkg-resources (39.0.1-2) ...
+Selecting previously unselected package python-setuptools.
+Preparing to unpack .../53-python-setuptools_39.0.1-2_all.deb ...
+Unpacking python-setuptools (39.0.1-2) ...
+Selecting previously unselected package unzip.
+Preparing to unpack .../54-unzip_6.0-21ubuntu1.1_amd64.deb ...
+Unpacking unzip (6.0-21ubuntu1.1) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../55-zip_3.0-11build1_amd64.deb ...
+Unpacking zip (3.0-11build1) ...
+Selecting previously unselected package linuxbrew-wrapper.
+Preparing to unpack .../56-linuxbrew-wrapper_20170516-2_all.deb ...
+Unpacking linuxbrew-wrapper (20170516-2) ...
+Setting up libquadmath0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up libgomp1:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up libjs-jquery (3.2.1-1) ...
+Setting up libatomic1:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up libcc1-0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up make (4.1-9.1ubuntu1) ...
+Setting up libtsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up unzip (6.0-21ubuntu1.1) ...
+Setting up linux-libc-dev:amd64 (4.15.0-128.131) ...
+Setting up libdpkg-perl (1.19.0.5ubuntu2.3) ...
+Setting up python-pkg-resources (39.0.1-2) ...
+Setting up zip (3.0-11build1) ...
+Setting up liblsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up fonts-lato (2.0-2) ...
+Setting up gcc-7-base:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up binutils-common:amd64 (2.30-21ubuntu1~18.04.4) ...
+Setting up libfile-fcntllock-perl (0.22-3build2) ...
+Setting up ruby-did-you-mean (1.2.0-2) ...
+Setting up libmpx2:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up libfakeroot:amd64 (1.22-2ubuntu1) ...
+Setting up ruby-net-telnet (0.1.1-2) ...
+Setting up libalgorithm-diff-perl (1.19.03-1) ...
+Setting up rubygems-integration (1.11) ...
+Setting up libmpc3:amd64 (1.1.0-1) ...
+Setting up libc-dev-bin (2.27-3ubuntu1.4) ...
+Setting up javascript-common (11) ...
+Setting up ruby-minitest (5.10.3-1) ...
+Setting up manpages-dev (4.15-1) ...
+Setting up libc6-dev:amd64 (2.27-3ubuntu1.4) ...
+Setting up libitm1:amd64 (8.4.0-1ubuntu1~18.04) ...
+Setting up ruby-power-assert (0.3.0-1) ...
+Setting up libisl19:amd64 (0.19-1) ...
+Setting up python-setuptools (39.0.1-2) ...
+Setting up libasan4:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up libbinutils:amd64 (2.30-21ubuntu1~18.04.4) ...
+Setting up libcilkrts5:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up libubsan0:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up fakeroot (1.22-2ubuntu1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up libgcc-7-dev:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up cpp-7 (7.5.0-3ubuntu1~18.04) ...
+Setting up libstdc++-7-dev:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libalgorithm-diff-xs-perl (0.04-5) ...
+Setting up binutils-x86-64-linux-gnu (2.30-21ubuntu1~18.04.4) ...
+Setting up cpp (4:7.4.0-1ubuntu2.3) ...
+Setting up binutils (2.30-21ubuntu1~18.04.4) ...
+Setting up gcc-7 (7.5.0-3ubuntu1~18.04) ...
+Setting up g++-7 (7.5.0-3ubuntu1~18.04) ...
+Setting up gcc (4:7.4.0-1ubuntu2.3) ...
+Setting up dpkg-dev (1.19.0.5ubuntu2.3) ...
+Setting up g++ (4:7.4.0-1ubuntu2.3) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.4ubuntu1) ...
+Setting up ruby-test-unit (3.2.5-1) ...
+Setting up rake (12.3.1-1ubuntu0.1) ...
+Setting up libruby2.5:amd64 (2.5.1-1ubuntu1.7) ...
+Setting up ruby2.5 (2.5.1-1ubuntu1.7) ...
+Setting up ruby (1:2.5.1) ...
+Setting up linuxbrew-wrapper (20170516-2) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.3) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for mime-support (3.60ubuntu1) ...
+root@Master:/home/ubuntu# 
+root@Master:/home/ubuntu# $ brew install kubernetes-helm
+$: command not found
+root@Master:/home/ubuntu# exit
+exit
+ubuntu@Master:~$ 
+ubuntu@Master:~$ $ brew install kubernetes-helm
+$: command not found
+ubuntu@Master:~$ brew install kubernetes-helm
+==> Select the Linuxbrew installation directory
+- Enter your password to install to /home/linuxbrew/.linuxbrew (recommended)
+- Press Control-D to install to /home/ubuntu/.linuxbrew
+- Press Control-C to cancel installation
+[sudo] password for ubuntu: 
+==> This script will install:
+/home/linuxbrew/.linuxbrew/bin/brew
+/home/linuxbrew/.linuxbrew/share/doc/homebrew
+/home/linuxbrew/.linuxbrew/share/man/man1/brew.1
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
+/home/linuxbrew/.linuxbrew/etc/bash_completion.d/brew
+/home/ubuntu/.cache/Homebrew/
+/home/linuxbrew/.linuxbrew/Homebrew
+==> The following new directories will be created:
+/home/linuxbrew/.linuxbrew/Cellar
+/home/linuxbrew/.linuxbrew/bin
+/home/linuxbrew/.linuxbrew/etc
+/home/linuxbrew/.linuxbrew/include
+/home/linuxbrew/.linuxbrew/lib
+/home/linuxbrew/.linuxbrew/opt
+/home/linuxbrew/.linuxbrew/sbin
+/home/linuxbrew/.linuxbrew/share
+/home/linuxbrew/.linuxbrew/share/zsh
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions
+/home/linuxbrew/.linuxbrew/var
+/home/linuxbrew/.linuxbrew/Homebrew
+
+Press RETURN to continue or any other key to abort
+==> /usr/bin/sudo /bin/mkdir -p /home/linuxbrew/.linuxbrew
+==> /usr/bin/sudo /bin/chown ubuntu:ubuntu /home/linuxbrew/.linuxbrew
+==> /usr/bin/sudo /bin/mkdir -p /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/Homebrew
+==> /usr/bin/sudo /bin/chmod g+rwx /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/Homebrew
+==> /usr/bin/sudo /bin/chmod 755 /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions
+==> /usr/bin/sudo /bin/chown ubuntu /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/Homebrew
+==> /usr/bin/sudo /bin/chgrp ubuntu /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/Homebrew
+==> /usr/bin/sudo /bin/mkdir -p /home/ubuntu/.cache/Homebrew
+==> /usr/bin/sudo /bin/chmod g+rwx /home/ubuntu/.cache/Homebrew
+==> /usr/bin/sudo /bin/chown ubuntu /home/ubuntu/.cache/Homebrew
+==> /usr/bin/sudo /bin/chgrp ubuntu /home/ubuntu/.cache/Homebrew
+==> Downloading and installing Linuxbrew...
+remote: Enumerating objects: 13120, done.
+remote: Counting objects: 100% (13120/13120), done.
+remote: Compressing objects: 100% (6347/6347), done.
+remote: Total 13120 (delta 8791), reused 9781 (delta 6356), pack-reused 0
+Receiving objects: 100% (13120/13120), 4.97 MiB | 13.21 MiB/s, done.
+Resolving deltas: 100% (8791/8791), done.
+From https://github.com/Linuxbrew/brew
+ * [new branch]      master     -> origin/master
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.0.1      -> 1.0.1
+ * [new tag]         1.0.2      -> 1.0.2
+ * [new tag]         1.0.3      -> 1.0.3
+ * [new tag]         1.0.4      -> 1.0.4
+ * [new tag]         1.0.5      -> 1.0.5
+ * [new tag]         1.0.6      -> 1.0.6
+ * [new tag]         1.0.7      -> 1.0.7
+ * [new tag]         1.0.8      -> 1.0.8
+ * [new tag]         1.0.9      -> 1.0.9
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.1.0.1    -> 1.1.0.1
+ * [new tag]         1.1.1      -> 1.1.1
+ * [new tag]         1.1.10     -> 1.1.10
+ * [new tag]         1.1.11     -> 1.1.11
+ * [new tag]         1.1.12     -> 1.1.12
+ * [new tag]         1.1.13     -> 1.1.13
+ * [new tag]         1.1.2      -> 1.1.2
+ * [new tag]         1.1.2.1    -> 1.1.2.1
+ * [new tag]         1.1.3      -> 1.1.3
+ * [new tag]         1.1.4      -> 1.1.4
+ * [new tag]         1.1.5      -> 1.1.5
+ * [new tag]         1.1.6      -> 1.1.6
+ * [new tag]         1.1.7      -> 1.1.7
+ * [new tag]         1.1.8      -> 1.1.8
+ * [new tag]         1.1.9      -> 1.1.9
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.2.1      -> 1.2.1
+ * [new tag]         1.2.2      -> 1.2.2
+ * [new tag]         1.2.3      -> 1.2.3
+ * [new tag]         1.2.4      -> 1.2.4
+ * [new tag]         1.2.5      -> 1.2.5
+ * [new tag]         1.2.6      -> 1.2.6
+ * [new tag]         1.2.7      -> 1.2.7
+ * [new tag]         1.2.8      -> 1.2.8
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.1      -> 1.3.1
+ * [new tag]         1.3.2      -> 1.3.2
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.3.4      -> 1.3.4
+ * [new tag]         1.3.5      -> 1.3.5
+ * [new tag]         1.3.6      -> 1.3.6
+ * [new tag]         1.3.7      -> 1.3.7
+ * [new tag]         1.3.8      -> 1.3.8
+ * [new tag]         1.3.9      -> 1.3.9
+ * [new tag]         1.4.0      -> 1.4.0
+ * [new tag]         1.4.1      -> 1.4.1
+ * [new tag]         1.4.2      -> 1.4.2
+ * [new tag]         1.4.3      -> 1.4.3
+ * [new tag]         1.5.0      -> 1.5.0
+ * [new tag]         1.5.1      -> 1.5.1
+ * [new tag]         1.5.10     -> 1.5.10
+ * [new tag]         1.5.11     -> 1.5.11
+ * [new tag]         1.5.12     -> 1.5.12
+ * [new tag]         1.5.13     -> 1.5.13
+ * [new tag]         1.5.14     -> 1.5.14
+ * [new tag]         1.5.2      -> 1.5.2
+ * [new tag]         1.5.3      -> 1.5.3
+ * [new tag]         1.5.4      -> 1.5.4
+ * [new tag]         1.5.5      -> 1.5.5
+ * [new tag]         1.5.6      -> 1.5.6
+ * [new tag]         1.5.7      -> 1.5.7
+ * [new tag]         1.5.8      -> 1.5.8
+ * [new tag]         1.5.9      -> 1.5.9
+ * [new tag]         1.6.0      -> 1.6.0
+ * [new tag]         1.6.1      -> 1.6.1
+ * [new tag]         1.6.10     -> 1.6.10
+ * [new tag]         1.6.11     -> 1.6.11
+ * [new tag]         1.6.12     -> 1.6.12
+ * [new tag]         1.6.13     -> 1.6.13
+ * [new tag]         1.6.14     -> 1.6.14
+ * [new tag]         1.6.15     -> 1.6.15
+ * [new tag]         1.6.16     -> 1.6.16
+ * [new tag]         1.6.17     -> 1.6.17
+ * [new tag]         1.6.2      -> 1.6.2
+ * [new tag]         1.6.3      -> 1.6.3
+ * [new tag]         1.6.4      -> 1.6.4
+ * [new tag]         1.6.5      -> 1.6.5
+ * [new tag]         1.6.6      -> 1.6.6
+ * [new tag]         1.6.7      -> 1.6.7
+ * [new tag]         1.6.8      -> 1.6.8
+ * [new tag]         1.6.9      -> 1.6.9
+ * [new tag]         1.7.0      -> 1.7.0
+ * [new tag]         1.7.1      -> 1.7.1
+ * [new tag]         1.7.2      -> 1.7.2
+ * [new tag]         1.7.3      -> 1.7.3
+ * [new tag]         1.7.4      -> 1.7.4
+ * [new tag]         1.7.5      -> 1.7.5
+ * [new tag]         1.7.6      -> 1.7.6
+ * [new tag]         1.7.7      -> 1.7.7
+ * [new tag]         1.8.0      -> 1.8.0
+ * [new tag]         1.8.1      -> 1.8.1
+ * [new tag]         1.8.2      -> 1.8.2
+ * [new tag]         1.8.3      -> 1.8.3
+ * [new tag]         1.8.4      -> 1.8.4
+ * [new tag]         1.8.5      -> 1.8.5
+ * [new tag]         1.8.6      -> 1.8.6
+ * [new tag]         1.9.0      -> 1.9.0
+ * [new tag]         1.9.1      -> 1.9.1
+ * [new tag]         1.9.2      -> 1.9.2
+ * [new tag]         1.9.3      -> 1.9.3
+ * [new tag]         1.9.4      -> 1.9.4
+HEAD is now at 93389fd README.md: Linuxbrew has been merged into Homebrew (#942)
+==> Migrating from Linuxbrew/brew to Homebrew/brew
+  Linuxbrew/brew has been merged into Homebrew/brew!
+  Linuxbrew/brew will no longer be updated.
+  Your git remote has been changed from
+     https://github.com/Linuxbrew/brew
+  to https://github.com/Homebrew/brew
+  See the blog post at https://brew.sh/2019/02/02/homebrew-2.0.0/
+==> Downloading https://linuxbrew.bintray.com/bottles-portable-ruby/portable-ruby-2.6.3_2.x86_64_linux.bottle.tar.gz
+##################################################################################################################################################################################################### 100.0%
+==> Pouring portable-ruby-2.6.3_2.x86_64_linux.bottle.tar.gz
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+==> Tapping homebrew/core
+Cloning into '/home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core'...
+remote: Enumerating objects: 415, done.
+remote: Counting objects: 100% (415/415), done.
+remote: Compressing objects: 100% (227/227), done.
+remote: Total 1080863 (delta 252), reused 295 (delta 188), pack-reused 1080448
+Receiving objects: 100% (1080863/1080863), 378.57 MiB | 14.78 MiB/s, done.
+Resolving deltas: 100% (757003/757003), done.
+Checking out files: 100% (5718/5718), done.
+Tapped 2 commands and 5438 formulae (5,742 files, 418.5MB).
+Already up-to-date.
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate user behaviour analytics.
+Read the analytics documentation (and how to opt-out) here:
+  http://docs.brew.sh/Analytics.html
+
+==> Next steps:
+- Install the Linuxbrew dependencies if you have sudo access:
+  Debian, Ubuntu, etc.
+    sudo apt-get install build-essential
+  Fedora, Red Hat, CentOS, etc.
+    sudo yum groupinstall 'Development Tools'
+  See http://linuxbrew.sh/#dependencies for more information.
+- Add Linuxbrew to your ~/.bash_profile by running
+    echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
+    echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
+    echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
+- Add Linuxbrew to your PATH
+    PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+- We recommend that you install GCC by running:
+    brew install gcc
+- Run `brew help` to get started
+- Further documentation: 
+    http://docs.brew.sh
+Warning: /home/linuxbrew/.linuxbrew/bin is not in your PATH.
+/usr/bin/brew: 78: exec: /home/ubuntu/.linuxbrew/bin/brew: not found
+ubuntu@Master:~$ 
+ubuntu@Master:~$ $ helm init
+$: command not found
+ubuntu@Master:~$ helm init
+
+Command 'helm' not found, but can be installed with:
+
+sudo snap install helm
+
+ubuntu@Master:~$ sudo snap install helm
+error: This revision of snap "helm" was published using classic confinement and thus may perform
+       arbitrary system changes outside of the security sandbox that snaps are usually confined to,
+       which may put your system at risk.
+
+       If you understand and want to proceed repeat the command including --classic.
+ubuntu@Master:~$ sudo snap install helm --classic
+2020-12-29T20:26:14Z INFO Waiting for automatic snapd restart...
+helm 3.4.2 from Snapcrafters installed
+ubuntu@Master:~$ helm install --namespace wordpress --name wordpress --set serviceType=NodePort stable/wordpress  
+Error: unknown flag: --name
+ubuntu@Master:~$ helm install --namespace wordpress helloworld wordpress --set serviceType=NodePort stable/wordpress  
+Error: expected at most two arguments, unexpected arguments: stable/wordpress
+ubuntu@Master:~$ helm install --namespace wordpress --generate-name wordpress --set serviceType=NodePort stable/wordpress  
+Error: cannot set --generate-name and also specify a name
+ubuntu@Master:~$ helm install --namespace wordpress helloworld --generate-name wordpress --set serviceType=NodePort stable/wordpress  
+Error: expected at most two arguments, unexpected arguments: stable/wordpress
+ubuntu@Master:~$ helm install --namespace wordpress helloworld --generate-name wordpress --set serviceType=NodePort
+Error: cannot set --generate-name and also specify a name
+ubuntu@Master:~$ helm install --namespace wordpress helloworld wordpress --set serviceType=NodePort stable/wordpress  
+Error: expected at most two arguments, unexpected arguments: stable/wordpress
+ubuntu@Master:~$ helm install --namespace wordpress helloworld wordpress --set serviceType=NodePort
+Error: failed to download "wordpress" (hint: running `helm repo update` may help)
+ubuntu@Master:~$ helm repo update
+Error: no repositories found. You must add one before updating
+ubuntu@Master:~$ helm install --set serviceType=NodePort --name wp-k8s stable/wordpress
+Error: unknown flag: --name
+ubuntu@Master:~$ helm install --set serviceType=NodePort helloworld wp-k8s stable/wordpress
+Error: expected at most two arguments, unexpected arguments: stable/wordpress
+ubuntu@Master:~$ brew upgrade kubernetes-helm
+Updating Homebrew...
+==> Homebrew has enabled anonymous aggregate formula and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (or will be during this `brew` run).
+
+==> Auto-updated Homebrew!
+Updated 1 tap (homebrew/core).
+==> Updated Formulae
+Updated 89 formulae.
+
+Error: helm not installed
+ubuntu@Master:~$ brew install kubernetes-helm
+==> Downloading https://linuxbrew.bintray.com/bottles/patchelf-0.12_4.x86_64_linux.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/56/56a0ff9acc9ab6c5d7f53d6f8ecce4878fd8c547a581960519504cf9e9dfac51?__gda__=exp=1609275042~hmac=7e499e33994bee59611b53cc7814ab1fd52721e6db6dc90d56bab81cda19
+######################################################################## 100.0%
+==> Downloading https://linuxbrew.bintray.com/bottles/helm-3.4.2.x86_64_linux.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/fb/fb985d8d82e8af985fa46013c91dad2d98c2ddaca42fc8a636a744afe0f2044e?__gda__=exp=1609275042~hmac=0e85a03afbbb599af687703f322a0198684e625eb376fb135bda6466c108
+######################################################################## 100.0%
+==> Installing dependencies for helm: patchelf
+==> Installing helm dependency: patchelf
+==> Pouring patchelf-0.12_4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/patchelf/0.12_4: 7 files, 942.3KB
+==> Installing helm
+==> Pouring helm-3.4.2.x86_64_linux.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/helm/3.4.2: 57 files, 37.7MB
+==> Caveats
+==> helm
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+ubuntu@Master:~$ brew upgrade kubernetes-helm
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 1 tap (homebrew/core).
+==> Updated Formulae
+Updated 1 formula.
+
+Warning: helm 3.4.2 already installed
+
+
+ubuntu@Master:~$ helm repo add bitnami https://charts.bitnami.com/bitnami
+"bitnami" has been added to your repositories
+ubuntu@Master:~$ helm install bitnami/wordpress
+Error: must either provide a name or specify --generate-name
+ubuntu@Master:~$ helm install --namespace wordpress --generate-name wordpress --set serviceType=NodePort 
+Error: failed to download "wordpress" (hint: running `helm repo update` may help)
+ubuntu@Master:~$ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "bitnami" chart repository
+Update Complete. ⎈Happy Helming!⎈
+ubuntu@Master:~$ helm install --namespace wordpress --generate-name wordpress --set serviceType=NodePort 
+Error: failed to download "wordpress" (hint: running `helm repo update` may help)
+ubuntu@Master:~$ helm install bitnami/wordpress --generate-name wordpress
+Error: cannot set --generate-name and also specify a name
+ubuntu@Master:~$ helm install bitnami/wordpress --generate-name
+Error: Kubernetes cluster unreachable: Get "http://localhost:8080/version?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+ubuntu@Master:~$ helm install bitnami/wordpress --generate-name
+Error: Kubernetes cluster unreachable: Get "http://localhost:8080/version?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+ubuntu@Master:~$ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+ubuntu@Master:~$ 
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+root@Master:/home/ubuntu# 
+root@Master:/home/ubuntu#  helm install bitnami/wordpress --generate-name
+W1229 20:50:37.488482   31838 loader.go:223] Config not found: /etc/rancher/k3s/k3s.yaml
+Error: failed to download "bitnami/wordpress" (hint: running `helm repo update` may help)
+root@Master:/home/ubuntu# helm repo update
+W1229 20:50:45.542246    1189 loader.go:223] Config not found: /etc/rancher/k3s/k3s.yaml
+Error: no repositories found. You must add one before updating
+root@Master:/home/ubuntu# exit
+exit
+ubuntu@Master:~$  helm install bitnami/wordpress --generate-name
+W1229 20:51:02.515460    4354 loader.go:223] Config not found: /etc/rancher/k3s/k3s.yaml
+W1229 20:51:04.990542    4354 loader.go:223] Config not found: /etc/rancher/k3s/k3s.yaml
+W1229 20:51:04.990726    4354 loader.go:223] Config not found: /etc/rancher/k3s/k3s.yaml
+Error: Kubernetes cluster unreachable: Get "http://localhost:8080/version?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+ubuntu@Master:~$ kubectl config view --raw >~/.kube/config
+-bash: /home/ubuntu/.kube/config: No such file or directory
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# helm repo add bitnami https://charts.bitnami.com/bitnami
+"bitnami" has been added to your repositories
+root@Master:/home/ubuntu# helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "bitnami" chart repository
+Update Complete. ⎈Happy Helming!⎈
+
+MacBook-Air:~ anshitagoel$ ssh ubuntu@52.149.196.225
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ System information disabled due to load higher than 2.0
+
+ * Introducing self-healing high availability clusters in MicroK8s.
+   Simple, hardened, Kubernetes for production, from RaspberryPi to DC.
+
+     https://microk8s.io/high-availability
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+3 packages can be updated.
+0 updates are security updates.
+
+New release '20.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Tue Dec 29 19:05:33 2020 from 116.75.240.17
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# client_loop: send disconnect: Broken pipe
+MacBook-Air:~ anshitagoel$ ssh ubuntu@52.149.196.225
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ System information disabled due to load higher than 2.0
+
+ * Introducing self-healing high availability clusters in MicroK8s.
+   Simple, hardened, Kubernetes for production, from RaspberryPi to DC.
+
+     https://microk8s.io/high-availability
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+3 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Wed Dec 30 15:17:58 2020 from 125.99.215.112
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# 
+root@Master:/home/ubuntu# $ helm install --namespace wordpress --name wordpress --set serviceType=NodePort stable/wordpress  
+$: command not found
+
+
+root@Master:/home/ubuntu# cp /etc/kubernetes/admin.conf $HOME/
+root@Master:/home/ubuntu# chown $(id -u):$(id -g) $HOME/admin.conf
+root@Master:/home/ubuntu# export KUBECONFIG=$HOME/admin.conf
+root@Master:/home/ubuntu# kubectl get nodes
+NAME       STATUS   ROLES                  AGE     VERSION
+master     Ready    control-plane,master   2d13h   v1.20.1
+worker01   Ready    <none>                 2d3h    v1.20.1
+worker02   Ready    <none>                 2d13h   v1.20.1
+root@Master:/home/ubuntu# helm search hub wordpress
+URL                                               	CHART VERSION	APP VERSION 	DESCRIPTION                                       
+https://hub.helm.sh/charts/bitnami/wordpress      	10.2.0       	5.6.0       	Web publishing platform for building blogs and ...
+https://hub.helm.sh/charts/groundhog2k/wordpress  	0.2.3        	5.6.0-apache	A Helm chart for Wordpress on Kubernetes          
+https://hub.helm.sh/charts/seccurecodebox/old-w...	2.3.0        	4.0         	Insecure & Outdated Wordpress Instance: Never e...
+https://hub.helm.sh/charts/presslabs/wordpress-...	0.10.5       	0.10.5      	Presslabs WordPress Operator Helm Chart           
+https://hub.helm.sh/charts/presslabs/wordpress-...	0.10.3       	v0.10.3     	A Helm chart for deploying a WordPress site on ...
+https://hub.helm.sh/charts/seccurecodebox/wpscan  	2.3.0        	latest      	A Helm chart for the WordPress security scanner...
+https://hub.helm.sh/charts/presslabs/stack        	0.10.3       	v0.10.3     	Open-Source WordPress Infrastructure on Kubernetes
+root@Master:/home/ubuntu# helm search hub wordpress  --max-col-width=0
+URL                                                    	CHART VERSION	APP VERSION 	DESCRIPTION                                                                            
+https://hub.helm.sh/charts/bitnami/wordpress           	10.2.0       	5.6.0       	Web publishing platform for building blogs and websites.                               
+https://hub.helm.sh/charts/groundhog2k/wordpress       	0.2.3        	5.6.0-apache	A Helm chart for Wordpress on Kubernetes                                               
+https://hub.helm.sh/charts/seccurecodebox/old-wordpress	2.3.0        	4.0         	Insecure & Outdated Wordpress Instance: Never expose it to the internet!               
+https://hub.helm.sh/charts/presslabs/wordpress-operator	0.10.5       	0.10.5      	Presslabs WordPress Operator Helm Chart                                                
+https://hub.helm.sh/charts/presslabs/wordpress-site    	0.10.3       	v0.10.3     	A Helm chart for deploying a WordPress site on Presslabs Stack                         
+https://hub.helm.sh/charts/seccurecodebox/wpscan       	2.3.0        	latest      	A Helm chart for the WordPress security scanner that integrates with the secureCodeBox.
+https://hub.helm.sh/charts/presslabs/stack             	0.10.3       	v0.10.3     	Open-Source WordPress Infrastructure on Kubernetes                                     
+root@Master:/home/ubuntu# helm repo list
+NAME   	URL                               
+bitnami	https://charts.bitnami.com/bitnami
+root@Master:/home/ubuntu# helm repo add bitnami https://charts.bitnami.com/bitnami
+"bitnami" already exists with the same configuration, skipping
+root@Master:/home/ubuntu# helm search repo wordpress --versions
+NAME             	CHART VERSION	APP VERSION   	DESCRIPTION                                       
+bitnami/wordpress	10.2.0       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.1.5       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.1.4       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.1.2       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.1.1       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.1.0       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.10      	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.9       	5.6.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.8       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.7       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.6       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.5       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.3       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.2       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	10.0.1       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.10.0       	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.9.3        	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.9.2        	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.9.1        	5.5.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.9.0        	5.5.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.8.5        	5.5.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.8.4        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.8.3        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.8.2        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.8.1        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.8.0        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.7.0        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.9        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.8        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.7        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.6        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.5        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.4        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.3        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.2        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.1        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.6.0        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.5.6        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.5.5        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.5.4        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.5.3        	5.5.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.5.1        	5.5.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.5.0        	5.5.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.4.4        	5.5.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.4.3        	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.4.2        	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.4.1        	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.4.0        	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.22       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.21       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.20       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.19       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.18       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.17       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.16       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.15       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.14       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.13       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.12       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.11       	5.4.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.10       	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.9        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.8        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.7        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.6        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.5        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.4        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.3        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.2        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.1        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.3.0        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.2.5        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.2.4        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.2.3        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.2.2        	5.4.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.2.1        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.2.0        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.10       	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.9        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.8        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.7        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.6        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.5        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.4        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.3        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.2        	5.4.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.1.1        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.0.4        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.0.3        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.0.1        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	9.0.0        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.6        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.5        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.4        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.3        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.2        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.1        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.1.0        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.0.4        	5.3.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.0.3        	5.3.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.0.2        	5.3.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.0.1        	5.3.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	8.0.0        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.8        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.7        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.6        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.5        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.4        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.3        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.2        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.1        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.6.0        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.5.4        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.5.3        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.5.2        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.5.1        	5.2.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.5.0        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.4.1        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.4.0        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.11       	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.10       	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.9        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.8        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.7        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.5        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.4        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.3        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.2        	5.2.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.1        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.3.0        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.2.3        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.2.2        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.2.1        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.2.0        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.1.0        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.0.1        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	7.0.0        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	6.1.1        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	6.1.0        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	6.0.0        	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.13.2       	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.13.1       	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.13.0       	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.6       	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.5       	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.4       	5.2.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.3       	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.2       	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.1       	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.12.0       	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.11.1       	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.11.0       	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.8        	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.7        	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.6        	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.5        	5.2.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.4        	5.2.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.3        	5.2.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.2        	5.2.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.1        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.9.0        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.8.2        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.8.1        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.8.0        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.7.1        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.7.0        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.6.1        	5.1.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.6.0        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.5.0        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.4.1        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.4.0        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.6        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.5        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.4        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.3        	5.1.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.2        	5.0.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.1        	5.0.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.2.0        	5.0.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.1.3        	5.0.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.1.2        	5.0.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.1.1        	5.0.3         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.1.0        	5.0.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.0.5        	5.0.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.0.4        	5.0.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.0.3        	5.0.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.0.2        	5.0.2         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.0.1        	5.0.1         	Web publishing platform for building blogs and ...
+bitnami/wordpress	5.0.0        	5.0.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	4.0.1        	5.0.0         	Web publishing platform for building blogs and ...
+bitnami/wordpress	4.0.0        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.3.0        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.2.1        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.2.0        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.1.1        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.1.0        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.0.3        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.0.2        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.0.1        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	3.0.0        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.10       	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.8        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.7        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.6        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.5        	4.9.8         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.4        	4.9.7         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.3        	4.9.7         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.1        	4.9.7-debian-9	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.1.0        	4.9.6         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.0.1        	4.9.6         	Web publishing platform for building blogs and ...
+bitnami/wordpress	2.0.0        	4.9.6         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.10       	4.9.6         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.9        	4.9.6         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.7        	4.9.6         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.6        	4.9.5         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.5        	4.9.5         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.4        	4.9.5         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.3        	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	1.0.2        	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	0.8.10       	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	0.8.9        	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	0.8.8        	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	0.8.7        	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	0.8.6        	4.9.4         	Web publishing platform for building blogs and ...
+bitnami/wordpress	0.8.5        	4.9.4         	Web publishing platform for building blogs and ...
+root@Master:/home/ubuntu# helm show readme bitnami/wordpress --version 10.0.3
+# WordPress
+
+[WordPress](https://wordpress.org/) is one of the most versatile open source content management systems on the market. A publishing platform for building blogs and websites.
+
+## TL;DR
+
+```console
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm install my-release bitnami/wordpress
+```
+
+## Introduction
+
+This chart bootstraps a [WordPress](https://github.com/bitnami/bitnami-docker-wordpress) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+
+It also packages the [Bitnami MariaDB chart](https://github.com/kubernetes/charts/tree/master/bitnami/mariadb) which is required for bootstrapping a MariaDB deployment for the database requirements of the WordPress application.
+
+Bitnami charts can be used with [Kubeapps](https://kubeapps.com/) for deployment and management of Helm Charts in clusters. This chart has been tested to work with NGINX Ingress, cert-manager, fluentd and Prometheus on top of the [BKPR](https://kubeprod.io/).
+
+## Prerequisites
+
+- Kubernetes 1.12+
+- Helm 3.0-beta3+
+- PV provisioner support in the underlying infrastructure
+- ReadWriteMany volumes for deployment scaling
+
+## Installing the Chart
+
+To install the chart with the release name `my-release`:
+
+```console
+helm install my-release bitnami/wordpress
+```
+
+The command deploys WordPress on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
+
+> **Tip**: List all releases using `helm list`
+
+## Uninstalling the Chart
+
+To uninstall/delete the `my-release` deployment:
+
+```console
+helm delete my-release
+```
+
+The command removes all the Kubernetes components associated with the chart and deletes the release.
+
+## Parameters
+
+The following table lists the configurable parameters of the WordPress chart and their default values per section/component:
+
+### Global parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `global.imageRegistry`                    | Global Docker image registry                                                          | `nil`                                                        |
+| `global.imagePullSecrets`                 | Global Docker registry secret names as an array                                       | `[]` (does not add image pull secrets to deployed pods)      |
+| `global.storageClass`                     | Global storage class for dynamic provisioning                                         | `nil`                                                        |
+
+### Common parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `nameOverride`                            | String to partially override common.names.fullname                                    | `nil`                                                        |
+| `fullnameOverride`                        | String to fully override common.names.fullname                                        | `nil`                                                        |
+| `clusterDomain`                           | Default Kubernetes cluster domain                                                     | `cluster.local`                                              |
+| `commonLabels`                            | Labels to add to all deployed objects                                                 | `{}`                                                         |
+| `commonAnnotations`                       | Annotations to add to all deployed objects                                            | `{}`                                                         |
+| `extraDeploy`                             | Array of extra objects to deploy with the release                                     | `[]` (evaluated as a template)                               |
+
+### WordPress parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `image.registry`                          | WordPress image registry                                                              | `docker.io`                                                  |
+| `image.repository`                        | WordPress image name                                                                  | `bitnami/wordpress`                                          |
+| `image.tag`                               | WordPress image tag                                                                   | `{TAG_NAME}`                                                 |
+| `image.pullPolicy`                        | WordPress image pull policy                                                           | `IfNotPresent`                                               |
+| `image.pullSecrets`                       | Specify docker-registry secret names as an array                                      | `[]` (does not add image pull secrets to deployed pods)      |
+| `image.debug`                             | Specify if debug logs should be enabled                                               | `false`                                                      |
+| `wordpressSkipInstall`                    | Skip wizard installation when the external db already contains data from a previous WordPress installation [see](https://github.com/bitnami/bitnami-docker-wordpress#connect-wordpress-docker-container-to-an-existing-database) | `false`                                                      |
+| `wordpressUsername`                       | User of the application                                                               | `user`                                                       |
+| `existingSecret`                          | Name of the existing Wordpress Secret (it must contain a key named `wordpress-password`). When it's set, `wordpressPassword` is ignored   | `nil`    |
+| `wordpressPassword`                       | Application password                                                                  | _random 10 character long alphanumeric string_               |
+| `wordpressEmail`                          | Admin email                                                                           | `user@example.com`                                           |
+| `wordpressFirstName`                      | First name                                                                            | `FirstName`                                                  |
+| `wordpressLastName`                       | Last name                                                                             | `LastName`                                                   |
+| `wordpressBlogName`                       | Blog name                                                                             | `User's Blog!`                                               |
+| `wordpressTablePrefix`                    | Table prefix                                                                          | `wp_`                                                        |
+| `wordpressScheme`                         | Scheme to generate application URLs [`http`, `https`]                                 | `http`                                                       |
+| `wordpressExtraConfigContent`             | Add extra content to the configuration file                                           | `""`                                                         |
+| `allowEmptyPassword`                      | Allow DB blank passwords                                                              | `true`                                                       |
+| `allowOverrideNone`                       | Set Apache AllowOverride directive to None                                            | `false`                                                      |
+| `htaccessPersistenceEnabled`              | Make `.htaccess` persistence so that it can be customized. [See](#disabling-htaccess) | `false`                                                      |
+| `customHTAccessCM`                        | Configmap with custom wordpress-htaccess.conf directives                              | `nil`                                                        |
+| `smtpHost`                                | SMTP host                                                                             | `nil`                                                        |
+| `smtpPort`                                | SMTP port                                                                             | `nil`                                                        |
+| `smtpUser`                                | SMTP user                                                                             | `nil`                                                        |
+| `smtpPassword`                            | SMTP password                                                                         | `nil`                                                        |
+| `smtpUsername`                            | User name for SMTP emails                                                             | `nil`                                                        |
+| `smtpProtocol`                            | SMTP protocol [`tls`, `ssl`, `none`]                                                  | `nil`                                                        |
+| `smtpExistingPassword`                    | Existing secret containing SMTP password in key `smtp-password`                       | `nil`                                                        |
+| `command`                                 | Override default container command (useful when using custom images)                  | `nil`                                                        |
+| `args`                                    | Override default container args (useful when using custom images)                     | `nil`                                                        |
+| `extraEnvVars`                            | Extra environment variables to be set on WordPress container                          | `{}`                                                         |
+| `extraEnvVarsCM`                          | Name of existing ConfigMap containing extra env vars                                  | `nil`                                                        |
+| `extraEnvVarsSecret`                      | Name of existing Secret containing extra env vars                                     | `nil`                                                        |
+
+### WordPress deployment parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `replicaCount`                            | Number of WordPress Pods to run                                                       | `1`                                                          |
+| `containerPorts.http`                     | HTTP port to expose at container level                                                | `8080`                                                       |
+| `containerPorts.https`                    | HTTPS port to expose at container level                                               | `8443`                                                       |
+| `podSecurityContext`                      | WordPress pods' Security Context                                                      | Check `values.yaml` file                                     |
+| `containerSecurityContext`                | WordPress containers' Security Context                                                | Check `values.yaml` file                                     |
+| `resources.limits`                        | The resources limits for the WordPress container                                      | `{}`                                                         |
+| `resources.requests`                      | The requested resources for the WordPress container                                   | `{"memory": "512Mi", "cpu": "300m"}`                         |
+| `livenessProbe`                           | Liveness probe configuration for WordPress                                            | Check `values.yaml` file                                     |
+| `readinessProbe`                          | Readiness probe configuration for WordPress                                           | Check `values.yaml` file                                     |
+| `customLivenessProbe`                     | Override default liveness probe                                                       | `nil`                                                        |
+| `customReadinessProbe`                    | Override default readiness probe                                                      | `nil`                                                        |
+| `updateStrategy`                          | Set up update strategy                                                                | `RollingUpdate`                                              |
+| `schedulerName`                           | Name of the alternate scheduler                                                       | `nil`                                                        |
+| `podAntiAffinityPreset`                   | Pod anti-affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`   | `soft`                                                  |
+| `nodeAffinityPreset.type`                 | Node affinity preset type. Ignored if `affinity` is set. Allowed values: `soft` or `hard`  | `""`                                                    |
+| `nodeAffinityPreset.key`                  | Node label key to match. Ignored if `affinity` is set.                                     | `""`                                                    |
+| `nodeAffinityPreset.values`               | Node label values to match. Ignored if `affinity` is set.                             | `[]`                                                         |
+| `affinity`                                | Affinity for pod assignment                                                           | `{}` (evaluated as a template)                               |
+| `nodeSelector`                            | Node labels for pod assignment                                                        | `{}` (evaluated as a template)                               |
+| `tolerations`                             | Tolerations for pod assignment                                                        | `[]` (evaluated as a template)                               |
+| `podLabels`                               | Extra labels for WordPress pods                                                       | `{}`                                                         |
+| `podAnnotations`                          | Annotations for WordPress pods                                                        | `{}`                                                         |
+| `extraVolumeMounts`                       | Additional volume mounts                                                              | `[]`                                                         |
+| `extraVolumes`                            | Additional volumes                                                                    | `[]`                                                         |
+| `initContainers`                          | Add additional init containers to the WordPress pods                                  | `{}` (evaluated as a template)                               |
+| `sidecars`                                | Attach additional sidecar containers to the pod                                       | `{}` (evaluated as a template)                               |
+
+### Exposure parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `service.type`                            | Kubernetes Service type                                                               | `LoadBalancer`                                               |
+| `service.port`                            | Service HTTP port                                                                     | `80`                                                         |
+| `service.httpsPort`                       | Service HTTPS port                                                                    | `443`                                                        |
+| `service.httpsTargetPort`                 | Service Target HTTPS port                                                             | `https`                                                      |
+| `service.nodePorts.http`                  | Kubernetes http node port                                                             | `""`                                                         |
+| `service.nodePorts.https`                 | Kubernetes https node port                                                            | `""`                                                         |
+| `service.extraPorts`                      | Extra ports to expose in the service (normally used with the `sidecar` value)         | `nil`                                                        |
+| `service.clusterIP`                       | WordPress service clusterIP IP                                                        | `None`                                                       |
+| `service.loadBalancerSourceRanges`        | Restricts access for LoadBalancer (only with `service.type: LoadBalancer`)            | `[]`                                                         |
+| `service.loadBalancerIP`                  | loadBalancerIP if service type is `LoadBalancer`                                      | `nil`                                                        |
+| `service.externalTrafficPolicy`           | Enable client source IP preservation                                                  | `Cluster`                                                    |
+| `service.annotations`                     | Service annotations                                                                   | `{}` (evaluated as a template)                               |
+| `ingress.enabled`                         | Enable ingress controller resource                                                    | `false`                                                      |
+| `ingress.certManager`                     | Add annotations for cert-manager                                                      | `false`                                                      |
+| `ingress.hostname`                        | Default host for the ingress resource                                                 | `wordpress.local`                                            |
+| `ingress.path`                            | Default path for the ingress resource                                                 | `/`                                                          |
+| `ingress.tls`                             | Create TLS Secret                                                                     | `false`                                                      |
+| `ingress.annotations`                     | Ingress annotations                                                                   | `[]` (evaluated as a template)                               |
+| `ingress.extraHosts[0].name`              | Additional hostnames to be covered                                                    | `nil`                                                        |
+| `ingress.extraHosts[0].path`              | Additional hostnames to be covered                                                    | `nil`                                                        |
+| `ingress.extraPaths`                      | Additional arbitrary path/backend objects                                             | `nil`                                                        |
+| `ingress.extraTls[0].hosts[0]`            | TLS configuration for additional hostnames to be covered                              | `nil`                                                        |
+| `ingress.extraTls[0].secretName`          | TLS configuration for additional hostnames to be covered                              | `nil`                                                        |
+| `ingress.secrets[0].name`                 | TLS Secret Name                                                                       | `nil`                                                        |
+| `ingress.secrets[0].certificate`          | TLS Secret Certificate                                                                | `nil`                                                        |
+| `ingress.secrets[0].key`                  | TLS Secret Key                                                                        | `nil`                                                        |
+
+### Persistence parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `persistence.enabled`                     | Enable persistence using PVC                                                          | `true`                                                       |
+| `persistence.existingClaim`               | Enable persistence using an existing PVC                                              | `nil`                                                        |
+| `persistence.storageClass`                | PVC Storage Class                                                                     | `nil` (uses alpha storage class annotation)                  |
+| `persistence.accessMode`                  | PVC Access Mode                                                                       | `ReadWriteOnce`                                              |
+| `persistence.size`                        | PVC Storage Request                                                                   | `10Gi`                                                       |
+
+### Database parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `mariadb.enabled`                         | Deploy MariaDB container(s)                                                           | `true`                                                       |
+| `mariadb.architecture`                    | MariaDB architecture (`standalone` or `replication`)                                  | `standalone`                                                 |
+| `mariadb.auth.rootPassword`               | Password for the MariaDB `root` user                                                  | _random 10 character alphanumeric string_                    |
+| `mariadb.auth.database`                   | Database name to create                                                               | `bitnami_wordpress`                                          |
+| `mariadb.auth.username`                   | Database user to create                                                               | `bn_wordpress`                                               |
+| `mariadb.auth.password`                   | Password for the database                                                             | _random 10 character long alphanumeric string_               |
+| `mariadb.primary.persistence.enabled`     | Enable database persistence using PVC                                                 | `true`                                                       |
+| `mariadb.primary.persistence.accessModes` | Database Persistent Volume Access Modes                                               | `[ReadWriteOnce]`                                            |
+| `mariadb.primary.persistence.size`        | Database Persistent Volume Size                                                       | `8Gi`                                                        |
+| `externalDatabase.host`                   | Host of the external database                                                         | `localhost`                                                  |
+| `externalDatabase.user`                   | Existing username in the external db                                                  | `bn_wordpress`                                               |
+| `externalDatabase.password`               | Password for the above username                                                       | `nil`                                                        |
+| `externalDatabase.database`               | Name of the existing database                                                         | `bitnami_wordpress`                                          |
+| `externalDatabase.port`                   | Database port number                                                                  | `3306`                                                       |
+| `externalDatabase.existingSecret`         | Name of the database existing Secret Object                                           | `nil`                                                        |
+
+### Metrics parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `metrics.enabled`                         | Start a side-car prometheus exporter                                                  | `false`                                                      |
+| `metrics.image.registry`                  | Apache exporter image registry                                                        | `docker.io`                                                  |
+| `metrics.image.repository`                | Apache exporter image name                                                            | `bitnami/apache-exporter`                                    |
+| `metrics.image.tag`                       | Apache exporter image tag                                                             | `{TAG_NAME}`                                                 |
+| `metrics.image.pullPolicy`                | Image pull policy                                                                     | `IfNotPresent`                                               |
+| `metrics.image.pullSecrets`               | Specify docker-registry secret names as an array                                      | `[]` (does not add image pull secrets to deployed pods)      |
+| `metrics.service.port`                    | Service Metrics port                                                                  | `9117`                                                       |
+| `metrics.service.annotations`             | Annotations for enabling prometheus to access the metrics endpoints                   | `{prometheus.io/scrape: "true", prometheus.io/port: "9117"}` |
+| `metrics.resources.limits`                | The resources limits for the metrics exporter container                               | `{}`                                                         |
+| `metrics.resources.requests`              | The requested resources for the metrics exporter container                            | `{}`                                                         |
+| `metrics.serviceMonitor.enabled`          | Create ServiceMonitor Resource for scraping metrics using PrometheusOperator          | `false`                                                      |
+| `metrics.serviceMonitor.namespace`        | Namespace where servicemonitor resource should be created                             | `nil`                                                        |
+| `metrics.serviceMonitor.interval`         | Specify the interval at which metrics should be scraped                               | `30s`                                                        |
+| `metrics.serviceMonitor.scrapeTimeout`    | Specify the timeout after which the scrape is ended                                   | `nil`                                                        |
+| `metrics.serviceMonitor.relabellings`     | Specify Metric Relabellings to add to the scrape endpoint                             | `nil`                                                        |
+| `metrics.serviceMonitor.honorLabels`      | honorLabels chooses the metric's labels on collisions with target labels.             | `false`                                                      |
+| `metrics.serviceMonitor.additionalLabels` | Used to pass Labels that are required by the Installed Prometheus Operator            | `{}`                                                         |
+
+### Other parameters
+
+| Parameter                                 | Description                                                                           | Default                                                      |
+|-------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `pdb.create`                              | Enable/disable a Pod Disruption Budget creation                                       | `false`                                                      |
+| `pdb.minAvailable`                        | Minimum number/percentage of pods that should remain scheduled                        | `1`                                                          |
+| `pdb.maxUnavailable`                      | Maximum number/percentage of pods that may be made unavailable                        | `nil`                                                        |
+| `autoscaling.enabled`                     | Enable autoscaling for WordPress                                                      | `false`                                                      |
+| `autoscaling.minReplicas`                 | Minimum number of WordPress replicas                                                  | `1`                                                          |
+| `autoscaling.maxReplicas`                 | Maximum number of WordPress replicas                                                  | `11`                                                         |
+| `autoscaling.targetCPU`                   | Target CPU utilization percentage                                                     | `nil`                                                        |
+| `autoscaling.targetMemory`                | Target Memory utilization percentage                                                  | `nil`                                                        |
+
+The above parameters map to the env variables defined in [bitnami/wordpress](http://github.com/bitnami/bitnami-docker-wordpress). For more information please refer to the [bitnami/wordpress](http://github.com/bitnami/bitnami-docker-wordpress) image documentation.
+
+Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
+
+```console
+helm install my-release \
+  --set wordpressUsername=admin \
+  --set wordpressPassword=password \
+  --set mariadb.auth.rootPassword=secretpassword \
+    bitnami/wordpress
+```
+
+The above command sets the WordPress administrator account username and password to `admin` and `password` respectively. Additionally, it sets the MariaDB `root` user password to `secretpassword`.
+
+Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
+
+```console
+helm install my-release -f values.yaml bitnami/wordpress
+```
+
+> **Tip**: You can use the default [values.yaml](values.yaml)
+
+## Configuration and installation details
+
+### [Rolling VS Immutable tags](https://docs.bitnami.com/containers/how-to/understand-rolling-tags-containers/)
+
+It is strongly recommended to use immutable tags in a production environment. This ensures your deployment does not change automatically if the same tag is updated with a different image.
+
+Bitnami will release a new chart updating its containers if a new version of the main container, significant changes, or critical vulnerabilities exist.
+
+### Production configuration
+
+This chart includes a `values-production.yaml` file where you can find some parameters oriented to production configuration in comparison to the regular `values.yaml`. You can use this file instead of the default one.
+
+- Set Apache AllowOverride directive to None:
+
+```diff
+- allowOverrideNone: false
++ allowOverrideNone: true
+```
+
+- Number of WordPress Pods to run:
+
+```diff
+- replicaCount: 1
++ replicaCount: 3
+```
+
+- Enable client source IP preservation:
+
+```diff
+- service.externalTrafficPolicy: Cluster
++ service.externalTrafficPolicy: Local
+```
+
+- PVC Access Mode:
+
+```diff
+- persistence.accessMode: ReadWriteOnce
++ ## To use the /admin portal and to ensure you can scale wordpress you need to provide a
++ ## ReadWriteMany PVC, if you dont have a provisioner for this type of storage
++ ## We recommend that you install the nfs provisioner and map it to a RWO volume
++ ## helm install nfs-server stable/nfs-server-provisioner --set persistence.enabled=true,persistence.size=10Gi
++ ##
++ persistence.accessMode: ReadWriteMany
+```
+
+- Start a side-car prometheus exporter:
+
+```diff
+- metrics.enabled: false
++ metrics.enabled: true
+```
+
+Note that [values-production.yaml](values-production.yaml) includes a replicaCount of 3, so there will be 3 WordPress pods. As a result, to use the "/admin" portal and to ensure you can scale wordpress you need to provide a ReadWriteMany PVC, if you don't have a provisioner for this type of storage, we recommend that you install the [NFS Server Provisioner chart](https://github.com/helm/charts/tree/master/stable/nfs-server-provisioner) (with the correct parameters, such as `persistence.enabled=true` and `persistence.size=10Gi`) and map it to a RWO volume.
+
+Then, you can deploy WordPress chart using the proper parameters:
+
+```console
+persistence.storageClass=nfs
+mariadb.primary.persistence.storageClass=nfs
+```
+
+#### Known limitations
+
+When performing admin operations that require activating the maintenance mode (such as updating a plugin or theme), it's activated in only one replica (see: [bug report](https://core.trac.wordpress.org/ticket/50797)). This implies that WP could be attending requests on other replicas while performing admin operations, with unpredictable consequences.
+
+To avoid that, you can manually activate/deactivate the maintenance mode on every replica using the WP CLI. For instance, if you installed WP with three replicas, you can run the commands below to activate the maintenance mode in all of them (assuming that the release name is `wordpress`):
+
+```console
+kubectl exec $(kubectl get pods -l app.kubernetes.io/name=wordpress -o jsonpath='{.items[0].metadata.name}') -c wordpress -- wp maintenance-mode activate
+kubectl exec $(kubectl get pods -l app.kubernetes.io/name=wordpress -o jsonpath='{.items[1].metadata.name}') -c wordpress -- wp maintenance-mode activate
+kubectl exec $(kubectl get pods -l app.kubernetes.io/name=wordpress -o jsonpath='{.items[2].metadata.name}') -c wordpress -- wp maintenance-mode activate
+```
+
+### Adding extra environment variables
+
+In case you want to add extra environment variables (useful for advanced operations like custom init scripts), you can use the `extraEnvVars` property.
+
+```yaml
+kong:
+  extraEnvVars:
+    - name: LOG_LEVEL
+      value: error
+```
+
+Alternatively, you can use a ConfigMap or a Secret with the environment variables. To do so, use the `extraEnvVarsCM` or the `extraEnvVarsSecret` values.
+
+### Sidecars
+
+If you have a need for additional containers to run within the same pod as WordPress (e.g. an additional metrics or logging exporter), you can do so via the `sidecars` config parameter. Simply define your container according to the Kubernetes container spec.
+
+```yaml
+sidecars:
+- name: your-image-name
+  image: your-image
+  imagePullPolicy: Always
+  ports:
+  - name: portname
+   containerPort: 1234
+```
+
+If these sidecars export extra ports, you can add extra port definitions using the `service.extraPorts` value:
+
+```yaml
+service:
+...
+  extraPorts:
+  - name: extraPort
+    port: 11311
+    targetPort: 11311
+```
+
+### Using an external database
+
+Sometimes you may want to have Wordpress connect to an external database rather than installing one inside your cluster, e.g. to use a managed database service, or use run a single database server for all your applications. To do this, the chart allows you to specify credentials for an external database under the [`externalDatabase` parameter](#parameters). You should also disable the MariaDB installation with the `mariadb.enabled` option. For example with the following parameters:
+
+```console
+mariadb.enabled=false
+externalDatabase.host=myexternalhost
+externalDatabase.user=myuser
+externalDatabase.password=mypassword
+externalDatabase.database=mydatabase
+externalDatabase.port=3306
+```
+
+Note also if you disable MariaDB per above you MUST supply values for the `externalDatabase` connection.
+
+In case the database already contains data from a previous WordPress installation, you need to set the `wordpressSkipInstall` parameter to _true_. Otherwise, the container would execute the installation wizard and could modify the existing data in the database. This parameter force the container to not execute the WordPress installation wizard. This is necessary in case you use a database that already has WordPress data [+info](https://github.com/bitnami/bitnami-docker-wordpress#connect-wordpress-docker-container-to-an-existing-database).
+
+### Setting Pod's affinity
+
+This chart allows you to set your custom affinity using the `affinity` paremeter. Find more infomation about Pod's affinity in the [kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity).
+
+As an alternative, you can use of the preset configurations for pod affinity, pod anti-affinity, and node affinity available at the [bitnami/common](https://github.com/bitnami/charts/tree/master/bitnami/common#affinities) chart. To do so, set the `podAffinityPreset`, `podAntiAffinityPreset`, or `nodeAffinityPreset` parameters.
+
+### Ingress
+
+This chart provides support for ingress resources. If you have an ingress controller installed on your cluster, such as [nginx-ingress](https://kubeapps.com/charts/stable/nginx-ingress) or [traefik](https://kubeapps.com/charts/stable/traefik) you can utilize the ingress controller to serve your WordPress application.
+
+To enable ingress integration, please set `ingress.enabled` to `true`
+
+### Hosts
+
+Most likely you will only want to have one hostname that maps to this WordPress installation. If that's your case, the property `ingress.hostname` will set it. However, it is possible to have more than one host. To facilitate this, the `ingress.extraHosts` object is can be specified as an array. You can also use `ingress.extraTLS` to add the TLS configuration for extra hosts.
+
+For each host indicated at `ingress.extraHosts`, please indicate a `name`, `path`, and any `annotations` that you may want the ingress controller to know about.
+
+Indicating TLS will cause WordPress to generate HTTPS URLs, and WordPress will be connected to at port 443. The actual TLS secret do not have to be generated by this chart. However, please note that if TLS is enabled, the ingress record will not work until this secret exists.
+
+For annotations, please see [this document](https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md). Not all annotations are supported by all ingress controllers, but this document does a good job of indicating which annotation is supported by many popular ingress controllers.
+
+### TLS Secrets
+
+This chart will facilitate the creation of TLS secrets for use with the ingress controller, however, this is not required.  There are three common use cases:
+
+- Helm generates/manages certificate secrets
+- User generates/manages certificates separately
+- An additional tool (like [kube-lego](https://kubeapps.com/charts/stable/kube-lego)) manages the secrets for the application
+
+In the first two cases, one will need a certificate and a key.  We would expect them to look like this:
+
+- certificate files should look like (and there can be more than one certificate if there is a certificate chain)
+
+```console
+-----BEGIN CERTIFICATE-----
+MIID6TCCAtGgAwIBAgIJAIaCwivkeB5EMA0GCSqGSIb3DQEBCwUAMFYxCzAJBgNV
+...
+jScrvkiBO65F46KioCL9h5tDvomdU1aqpI/CBzhvZn1c0ZTf87tGQR8NK7v7
+-----END CERTIFICATE-----
+```
+
+- keys should look like:
+
+```console
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvLYcyu8f3skuRyUgeeNpeDvYBCDcgq+LsWap6zbX5f8oLqp4
+...
+wrj2wDbCDCFmfqnSJ+dKI3vFLlEz44sAV8jX/kd4Y6ZTQhlLbYc=
+-----END RSA PRIVATE KEY-----
+```
+
+If you are going to use Helm to manage the certificates, please copy these values into the `certificate` and `key` values for a given `ingress.secrets` entry.
+
+If you are going to manage TLS secrets outside of Helm, please know that you can create a TLS secret (named `wordpress.local-tls` for example).
+
+Please see [this example](https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx/examples/tls) for more information.
+
+### Ingress-terminated https
+
+In cases where HTTPS/TLS is terminated on the ingress, you may run into an issue where non-https liveness and readiness probes result in a 302 (redirect from HTTP to HTTPS) and are interpreted by Kubernetes as not-live/not-ready.  (See [Kubernetes issue #47893 on GitHub](https://github.com/kubernetes/kubernetes/issues/47893) for further details about 302 _not_ being interpreted as "successful".)  To work around this problem, use `livenessProbeHeaders` and `readinessProbeHeaders` to pass the same headers that your ingress would pass in order to get an HTTP 200 status result.  For example (where the following is in a `--values`-referenced file):
+
+```yaml
+livenessProbeHeaders:
+  - name: X-Forwarded-Proto
+    value: https
+readinessProbeHeaders:
+  - name: X-Forwarded-Proto
+    value: https
+```
+
+Any number of name/value pairs may be specified; they are all copied into the liveness or readiness probe definition.
+
+### Disabling `.htaccess`
+
+For performance and security reasons, it is a good practice to configure Apache with `AllowOverride None`. Instead of using `.htaccess` files, Apache will load the same dircetives at boot time. These directives are located in `/opt/bitnami/wordpress/wordpress-htaccess.conf`. The container image includes by default these directives all of the default `.htaccess` files in WordPress (together with the default plugins). To enable this feature, install the chart with the following value: `allowOverrideNone=yes`
+
+However, some plugins may include `.htaccess` directives that will not be loaded when `AllowOverride` is set to `None`. A way to make them work would be to create your own `wordpress-htaccess.conf` file with all the required dircectives to make the plugin work. After creating it, then create a ConfigMap with it and install the chart with the correct parameters:
+
+```console
+allowOverrideNone=true
+customHTAccessCM=custom-htaccess
+```
+
+Also, some plugins permit editing the `.htaccess` and it might be needed to persit it in order to keep the changes, A way to make it work would be to set `htaccessPersistenceEnabled`.
+
+```console
+allowOverrideNone=false
+htaccessPersistenceEnabled=true
+```
+
+## Persistence
+
+The [Bitnami WordPress](https://github.com/bitnami/bitnami-docker-wordpress) image stores the WordPress data and configurations at the `/bitnami` path of the container.
+
+Persistent Volume Claims are used to keep the data across deployments. This is known to work in GCE, AWS, and minikube.
+See the [Parameters](#parameters) section to configure the PVC or to disable persistence.
+
+## Troubleshooting
+
+Find more information about how to deal with common errors related to Bitnami’s Helm charts in [this troubleshooting guide](https://docs.bitnami.com/general/how-to/troubleshoot-helm-chart-issues).
+
+## Upgrading
+
+### To 10.0.0
+
+[On November 13, 2020, Helm v2 support was formally finished](https://github.com/helm/charts#status-of-the-project), this major version is the result of the required changes applied to the Helm Chart to be able to incorporate the different features added in Helm v3 and to be consistent with the Helm project itself regarding the Helm v2 EOL.
+
+#### What changes were introduced in this major version?
+
+- Previous versions of this Helm Chart use `apiVersion: v1` (installable by both Helm 2 and 3), this Helm Chart was updated to `apiVersion: v2` (installable by Helm 3 only). [Here](https://helm.sh/docs/topics/charts/#the-apiversion-field) you can find more information about the `apiVersion` field.
+- Move dependency information from the *requirements.yaml* to the *Chart.yaml*.
+- After running `helm dependency update`, a *Chart.lock* file is generated containing the same structure used in the previous *requirements.lock*.
+- The different fields present in the *Chart.yaml* file has been ordered alphabetically in a homogeneous way for all the Bitnami Helm Charts.
+- MariaDB dependency version was bumped to a new major version that introduces several incompatilibites. Therefore, backwards compatibility is not guaranteed unless an external database is used. Check [MariaDB Upgrading Notes](https://github.com/bitnami/charts/tree/master/bitnami/mariadb#to-800) for more information.
+
+#### Considerations when upgrading to this version
+
+- If you want to upgrade to this version using Helm v2, this scenario is not supported as this version doesn't support Helm v2 anymore.
+- If you installed the previous version with Helm v2 and wants to upgrade to this version with Helm v3, please refer to the [official Helm documentation](https://helm.sh/docs/topics/v2_v3_migration/#migration-use-cases) about migrating from Helm v2 to v3.
+- If you want to upgrade to this version from a previous one installed with Helm v3, there are two alternatives:
+  - Install a new WordPress chart, and migrate your WordPress site using backup/restore tools such as [VaultPress](https://vaultpress.com/) or [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/).
+  - Reuse the PVC used to hold the MariaDB data on your previous release. To do so, follow the instructions below (the following example assumes that the release name is `wordpress`).
+
+> Warning: please create a backup of your database before running any of these actions. The steps below would be only valid if your application (e.g. any plugins or custom code) is compatible with MariaDB 10.5.
+
+Obtain the credentials and the name of the PVC used to hold the MariaDB data on your current release:
+
+```console
+$ export WORDPRESS_PASSWORD=$(kubectl get secret --namespace default wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+$ export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace default wordpress-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
+$ export MARIADB_PASSWORD=$(kubectl get secret --namespace default wordpress-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
+$ export MARIADB_PVC=$(kubectl get pvc -l app.kubernetes.io/instance=wordpress,app.kubernetes.io/name=mariadb,app.kubernetes.io/component=primary -o jsonpath="{.items[0].metadata.name}")
+```
+
+Upgrade your release (maintaining the version) disabling MariaDB and scaling WordPress replicas to 0:
+
+```console
+$ helm upgrade wordpress bitnami/wordpress --set wordpressPassword=$WORDPRESS_PASSWORD --set replicaCount=0 --set mariadb.enabled=false --version 9.6.4
+```
+
+Finally, upgrade you release to `10.0.0` reusing the existing PVC, and enabling back MariaDB:
+
+```console
+$ helm upgrade wordpress bitnami/wordpress --set mariadb.primary.persistence.existingClaim=$MARIADB_PVC --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set wordpressPassword=$WORDPRESS_PASSWORD 
+```
+
+You should see the lines below in MariaDB container logs:
+
+```console
+$ kubectl logs $(kubectl get pods -l app.kubernetes.io/instance=wordpress,app.kubernetes.io/name=mariadb,app.kubernetes.io/component=primary -o jsonpath="{.items[0].metadata.name}")
+...
+mariadb 12:13:24.98 INFO  ==> Using persisted data
+mariadb 12:13:25.01 INFO  ==> Running mysql_upgrade
+...
+```
+
+#### Useful links
+
+- https://docs.bitnami.com/tutorials/resolve-helm2-helm3-post-migration-issues/
+- https://helm.sh/docs/topics/v2_v3_migration/
+- https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/
+
+### To 9.0.0
+
+The [Bitnami WordPress](https://github.com/bitnami/bitnami-docker-wordpress) image was migrated to a "non-root" user approach. Previously the container ran as the `root` user and the Apache daemon was started as the `daemon` user. From now on, both the container and the Apache daemon run as user `1001`. You can revert this behavior by setting the parameters `securityContext.runAsUser`, and `securityContext.fsGroup` to `0`.
+Chart labels and Ingress configuration were also adapted to follow the Helm charts best practices.
+
+Consequences:
+
+- The HTTP/HTTPS ports exposed by the container are now `8080/8443` instead of `80/443`.
+- No writing permissions will be granted on `wp-config.php` by default.
+- Backwards compatibility is not guaranteed.
+
+To upgrade to `9.0.0`, it's recommended to install a new WordPress chart, and migrate your WordPress site using backup/restore tools such as [VaultPress](https://vaultpress.com/) or [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/).
+
+### To 8.0.0
+
+Helm performs a lookup for the object based on its group (apps), version (v1), and kind (Deployment). Also known as its GroupVersionKind, or GVK. Changing the GVK is considered a compatibility breaker from Kubernetes' point of view, so you cannot "upgrade" those objects to the new GVK in-place. Earlier versions of Helm 3 did not perform the lookup correctly which has since been fixed to match the spec.
+
+In https://github.com/helm/charts/pulls/12642 the `apiVersion` of the deployment resources was updated to `apps/v1` in tune with the api's deprecated, resulting in compatibility breakage.
+
+This major version signifies this change.
+
+### To 3.0.0
+
+Backwards compatibility is not guaranteed unless you modify the labels used on the chart's deployments.
+Use the workaround below to upgrade from versions previous to `3.0.0`. The following example assumes that the release name is `wordpress`:
+
+```console
+kubectl patch deployment wordpress-wordpress --type=json -p='[{"op": "remove", "path": "/spec/selector/matchLabels/chart"}]'
+kubectl delete statefulset wordpress-mariadb --cascade=false
+```
+
+root@Master:/home/ubuntu# helm show values bitnami/wordpress --version 10.0.3
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry and imagePullSecrets
+##
+# global:
+#   imageRegistry: myRegistryName
+#   imagePullSecrets:
+#     - myRegistryKeySecretName
+#   storageClass: myStorageClass
+
+## Bitnami WordPress image version
+## ref: https://hub.docker.com/r/bitnami/wordpress/tags/
+##
+image:
+  registry: docker.io
+  repository: bitnami/wordpress
+  tag: 5.5.3-debian-10-r19
+  ## Specify a imagePullPolicy
+  ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+  ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+  ##
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ##
+  # pullSecrets:
+  #   - myRegistryKeySecretName
+  ## Set to true if you would like to see extra information on logs
+  ##
+  debug: false
+
+## String to partially override aspnet-core.fullname template (will maintain the release name)
+##
+# nameOverride:
+
+## String to fully override aspnet-core.fullname template
+##
+# fullnameOverride:
+
+## Add labels to all the deployed resources
+##
+commonLabels: {}
+
+## Add annotations to all the deployed resources
+##
+commonAnnotations: {}
+
+## Kubernetes Cluster Domain
+##
+clusterDomain: cluster.local
+
+## Extra objects to deploy (value evaluated as a template)
+##
+extraDeploy: []
+
+## User of the application
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressUsername: user
+
+## Application password
+## Defaults to a random 10-character alphanumeric string if not set
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+# wordpressPassword:
+
+## Use existing secret (does not create the WordPress Secret object)
+## Must contain key `wordpress-secret`
+## NOTE: When it's set, the `wordpressPassword` parameter is ignored
+##
+# existingSecret:
+
+## Admin email
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressEmail: user@example.com
+
+## First name
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressFirstName: FirstName
+
+## Last name
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressLastName: LastName
+
+## Blog name
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressBlogName: User's Blog!
+
+## Table prefix
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressTablePrefix: wp_
+
+## Scheme to generate application URLs
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+wordpressScheme: http
+
+## Skip wizard installation (only if you use an external database that already contains WordPress data)
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#connect-wordpress-docker-container-to-an-existing-database
+##
+wordpressSkipInstall: false
+
+## Add extra content to the default configuration file
+##
+wordpressExtraConfigContent: ""
+
+## Set to `false` to allow the container to be started with blank passwords
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+allowEmptyPassword: true
+
+## Set Apache allowOverride to None
+## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+##
+allowOverrideNone: false
+
+## Persist the custom changes of the htaccess. It depends on the value of
+## `.Values.allowOverrideNone`, when `yes` it will persist `/opt/bitnami/wordpress/wordpress-htaccess.conf`
+## if `no` it will persist `/opt/bitnami/wordpress/.htaccess`
+##
+htaccessPersistenceEnabled: false
+
+## ConfigMap with custom wordpress-htaccess.conf file (requires allowOverrideNone to true)
+##
+customHTAccessCM:
+
+## Command and args for running the container (set to default if not set). Use array form
+##
+command: []
+args: []
+
+## Set up update strategy for wordpress installation. Set to Recreate if you use persistent volume that cannot be mounted by more than one pods to makesure the pods is destroyed first.
+## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+## Example:
+## updateStrategy:
+##  type: RollingUpdate
+##  rollingUpdate:
+##    maxSurge: 25%
+##    maxUnavailable: 25%
+##
+updateStrategy:
+  type: RollingUpdate
+
+## Use an alternate scheduler, e.g. "stork".
+## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+##
+# schedulerName:
+
+## SMTP mail delivery configuration
+## ref: https://github.com/bitnami/bitnami-docker-wordpress/#smtp-configuration
+##
+# smtpHost:
+# smtpPort:
+# smtpUser:
+# smtpPassword:
+# smtpProtocol:
+
+## Use an existing secret for the SMTP Password
+## Can be the same secret as existingSecret
+## Must contain key `smtp-password`
+## NOTE: When it's set, the `smtpPassword` parameter is ignored
+##
+# smtpExistingSecret:
+
+## Number of replicas (requires ReadWriteMany PVC support)
+##
+replicaCount: 1
+
+## An array to add extra env vars
+## Example:
+## extraEnvVars:
+##   - name: FOO
+##     value: "bar"
+##
+extraEnvVars: []
+
+## ConfigMap with extra environment variables
+##
+extraEnvVarsCM:
+
+## Secret with extra environment variables
+##
+extraEnvVarsSecret:
+
+## Extra volumes to add to the deployment
+##
+extraVolumes: []
+
+## Extra volume mounts to add to the container
+##
+extraVolumeMounts: []
+
+## Add sidecars to the pod.
+## Example:
+## sidecars:
+##   - name: your-image-name
+##     image: your-image
+##     imagePullPolicy: Always
+##     ports:
+##       - name: portname
+##         containerPort: 1234
+##
+sidecars: {}
+
+## Add init containers to the pod.
+## ref: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+## Example:
+## initContainers:
+##  - name: your-image-name
+##    image: your-image
+##    imagePullPolicy: Always
+##    command: ['sh', '-c', 'copy themes and plugins from git and push to /bitnami/wordpress/wp-content. Should work with extraVolumeMounts and extraVolumes']
+##
+initContainers: {}
+
+## Pod Labels
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+##
+podLabels: {}
+
+## Pod annotations
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+##
+podAnnotations: {}
+
+## Pod affinity preset
+## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+## Allowed values: soft, hard
+##
+podAffinityPreset: ""
+
+## Pod anti-affinity preset
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+## Allowed values: soft, hard
+##
+podAntiAffinityPreset: soft
+
+## Node affinity preset
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
+## Allowed values: soft, hard
+##
+nodeAffinityPreset:
+  ## Node affinity type
+  ## Allowed values: soft, hard
+  ##
+  type: ""
+  ## Node label key to match
+  ## E.g.
+  ## key: "kubernetes.io/e2e-az-name"
+  ##
+  key: ""
+  ## Node label values to match
+  ## E.g.
+  ## values:
+  ##   - e2e-az1
+  ##   - e2e-az2
+  ##
+  values: []
+
+## Affinity for pod assignment
+## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+## Note: podAffinityPreset, podAntiAffinityPreset, and  nodeAffinityPreset will be ignored when it's set
+##
+affinity: {}
+
+## Node labels for pod assignment. Evaluated as a template.
+## ref: https://kubernetes.io/docs/user-guide/node-selection/
+##
+nodeSelector: {}
+
+## Tolerations for pod assignment. Evaluated as a template.
+## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+##
+tolerations: {}
+
+## WordPress containers' resource requests and limits
+## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+##
+resources:
+  limits: {}
+  requests:
+    memory: 512Mi
+    cpu: 300m
+
+## Configure Pods Security Context
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+##
+podSecurityContext:
+  enabled: true
+  fsGroup: 1001
+
+## Configure Container Security Context (only main container)
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+##
+containerSecurityContext:
+  enabled: true
+  runAsUser: 1001
+
+## WordPress containers' liveness and readiness probes.
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
+##
+livenessProbe:
+  enabled: true
+  httpGet:
+    path: /wp-admin/install.php
+    port: http
+    scheme: HTTP
+    ## If using an HTTPS-terminating load-balancer, the probes may need to behave
+    ## like the balancer to prevent HTTP 302 responses. According to the Kubernetes
+    ## docs, 302 should be considered "successful", but this issue on GitHub
+    ## (https://github.com/kubernetes/kubernetes/issues/47893) shows that it isn't.
+    ##
+    ## httpHeaders:
+    ## - name: X-Forwarded-Proto
+    ##   value: https
+    ##
+    httpHeaders: []
+  initialDelaySeconds: 120
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+readinessProbe:
+  enabled: true
+  httpGet:
+    path: /wp-login.php
+    port: http
+    scheme: HTTP
+    ## If using an HTTPS-terminating load-balancer, the probes may need to behave
+    ## like the balancer to prevent HTTP 302 responses. According to the Kubernetes
+    ## docs, 302 should be considered "successful", but this issue on GitHub
+    ## (https://github.com/kubernetes/kubernetes/issues/47893) shows that it isn't.
+    ##
+    ## httpHeaders:
+    ## - name: X-Forwarded-Proto
+    ##   value: https
+    ##
+    httpHeaders: []
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+## Custom liveness and readiness probes, it overrides the default one (evaluated as a template)
+##
+customLivenessProbe: {}
+customReadinessProbe: {}
+
+## Container ports
+##
+containerPorts:
+  http: 8080
+  https: 8443
+
+## Kubernetes configuration
+## For minikube, set this to NodePort, elsewhere use LoadBalancer or ClusterIP
+##
+service:
+  type: LoadBalancer
+  ## HTTP Port
+  ##
+  port: 80
+  ## HTTPS Port
+  ##
+  httpsPort: 443
+  ## HTTPS Target Port
+  ## defaults to https unless overridden to the specified port.
+  ## if you want the target port to be "http" or "80" you can specify that here.
+  ##
+  httpsTargetPort: https
+  ## Node Ports to expose
+  ## nodePorts:
+  ##   http: <to set explicitly, choose port between 30000-32767>
+  ##   https: <to set explicitly, choose port between 30000-32767>
+  ##
+  nodePorts:
+    http: ""
+    https: ""
+  ## Service clusterIP.
+  ##
+  # clusterIP: None
+  ## loadBalancerIP for the SuiteCRM Service (optional, cloud specific)
+  ## ref: http://kubernetes.io/docs/user-guide/services/#type-loadbalancer
+  ##
+  # loadBalancerIP:
+  ## Load Balancer sources
+  ## https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/#restrict-access-for-loadbalancer-service
+  ## Example:
+  ## loadBalancerSourceRanges:
+  ##   - 10.10.10.0/24
+  ##
+  loadBalancerSourceRanges: []
+  ## Enable client source IP preservation
+  ## ref http://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip
+  ##
+  externalTrafficPolicy: Cluster
+  ## Provide any additional annotations which may be required (evaluated as a template).
+  ##
+  annotations: {}
+  ## Extra ports to expose (normally used with the `sidecar` value)
+  ##
+  # extraPorts:
+
+## Configure the ingress resource that allows you to access the
+## WordPress installation. Set up the URL
+## ref: http://kubernetes.io/docs/user-guide/ingress/
+##
+ingress:
+  ## Set to true to enable ingress record generation
+  ##
+  enabled: false
+
+  ## Set this to true in order to add the corresponding annotations for cert-manager
+  ##
+  certManager: false
+
+  ## When the ingress is enabled, a host pointing to this will be created
+  ##
+  hostname: wordpress.local
+
+  ## The Path to WordPress. You may need to set this to '/*' in order to use this
+  ## with ALB ingress controllers.
+  ##
+  path: /
+
+  ## Ingress annotations done as key:value pairs
+  ## For a full list of possible ingress annotations, please see
+  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
+  ##
+  ## If certManager is set to true, annotation kubernetes.io/tls-acme: "true" will automatically be set
+  ##
+  annotations: {}
+
+  ## Enable TLS configuration for the hostname defined at ingress.hostname parameter
+  ## TLS certificates will be retrieved from a TLS secret with name: {{- printf "%s-tls" .Values.ingress.hostname }}
+  ## You can use the ingress.secrets parameter to create this TLS secret or relay on cert-manager to create it
+  ##
+  tls: false
+
+  ## The list of additional hostnames to be covered with this ingress record.
+  ## Most likely the hostname above will be enough, but in the event more hosts are needed, this is an array
+  ## extraHosts:
+  ## - name: wordpress.local
+  ##   path: /
+  ##
+
+  ## Any additional arbitrary paths that may need to be added to the ingress under the main host.
+  ## For example: The ALB ingress controller requires a special rule for handling SSL redirection.
+  ## extraPaths:
+  ## - path: /*
+  ##   backend:
+  ##     serviceName: ssl-redirect
+  ##     servicePort: use-annotation
+
+  ## The tls configuration for additional hostnames to be covered with this ingress record.
+  ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
+  ## extraTls:
+  ## - hosts:
+  ##     - wordpress.local
+  ##   secretName: wordpress.local-tls
+  ##
+
+  ## If you're providing your own certificates, please use this to add the certificates as secrets
+  ## key and certificate should start with -----BEGIN CERTIFICATE----- or
+  ## -----BEGIN RSA PRIVATE KEY-----
+  ##
+  ## name should line up with a tlsSecret set further up
+  ## If you're using cert-manager, this is unneeded, as it will create the secret for you if it is not set
+  ##
+  ## It is also possible to create and manage the certificates outside of this helm chart
+  ## Please see README.md for more information
+  ##
+  secrets: []
+  ## - name: wordpress.local-tls
+  ##   key:
+  ##   certificate:
+  ##
+
+## Enable persistence using Persistent Volume Claims
+## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+persistence:
+  enabled: true
+  ## wordpress data Persistent Volume Storage Class
+  ## If defined, storageClassName: <storageClass>
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS & OpenStack)
+  ##
+  # storageClass: "-"
+  ##
+  ## If you want to reuse an existing claim, you can pass the name of the PVC using
+  ## the existingClaim variable
+  # existingClaim: your-claim
+  accessMode: ReadWriteOnce
+  size: 10Gi
+
+## Wordpress Pod Disruption Budget configuration
+## ref: https://kubernetes.io/docs/tasks/run-application/configure-pdb/
+##
+pdb:
+  create: false
+  ## Min number of pods that must still be available after the eviction
+  ##
+  minAvailable: 1
+  ## Max number of pods that can be unavailable after the eviction
+  ##
+  # maxUnavailable: 1
+
+## Wordpress Autoscaling configuration
+##
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 11
+  # targetCPU: 50
+  # targetMemory: 50
+
+## Prometheus Exporter / Metrics
+##
+metrics:
+  enabled: false
+  image:
+    registry: docker.io
+    repository: bitnami/apache-exporter
+    tag: 0.8.0-debian-10-r217
+    pullPolicy: IfNotPresent
+    ## Optionally specify an array of imagePullSecrets.
+    ## Secrets must be manually created in the namespace.
+    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+    ##
+    # pullSecrets:
+    #   - myRegistryKeySecretName
+
+  ## Prometheus expoter service parameters
+  ##
+  service:
+    ## Metrics port
+    ##
+    port: 9117
+    ## Annotations for the Prometheus exporter service
+    ##
+    annotations:
+      prometheus.io/scrape: "true"
+      prometheus.io/port: "{{ .Values.metrics.service.port }}"
+
+  ## Metrics exporter containers' resource requests and limits
+  ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+  ##
+  resources:
+    limits: {}
+    requests: {}
+
+  ## Prometheus Service Monitor
+  ## ref: https://github.com/coreos/prometheus-operator
+  ##      https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#endpoint
+  ##
+  serviceMonitor:
+    ## If the operator is installed in your cluster, set to true to create a Service Monitor Entry
+    ##
+    enabled: false
+    ## Specify the namespace in which the serviceMonitor resource will be created
+    # namespace: ""
+    ## Specify the interval at which metrics should be scraped
+    ##
+    interval: 30s
+    ## Specify the timeout after which the scrape is ended
+    # scrapeTimeout: 30s
+    ## Specify Metric Relabellings to add to the scrape endpoint
+    # relabellings:
+    ## Specify honorLabels parameter to add the scrape endpoint
+    ##
+    honorLabels: false
+    ## Used to pass Labels that are used by the Prometheus installed in your cluster to select Service Monitors to work with
+    ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#prometheusspec
+    ##
+    additionalLabels: {}
+
+##
+## MariaDB chart configuration
+##
+## https://github.com/bitnami/charts/blob/master/bitnami/mariadb/values.yaml
+##
+mariadb:
+  ## Whether to deploy a mariadb server to satisfy the applications database requirements. To use an external database set this to false and configure the externalDatabase parameters
+  ##
+  enabled: true
+  ## MariaDB architecture. Allowed values: standalone or replication
+  ##
+  architecture: standalone
+  ## MariaDB Authentication parameters
+  ##
+  auth:
+    ## MariaDB root password
+    ## ref: https://github.com/bitnami/bitnami-docker-mariadb#setting-the-root-password-on-first-run
+    ##
+    rootPassword: ""
+    ## MariaDB custom user and database
+    ## ref: https://github.com/bitnami/bitnami-docker-mariadb/blob/master/README.md#creating-a-database-on-first-run
+    ## ref: https://github.com/bitnami/bitnami-docker-mariadb/blob/master/README.md#creating-a-database-user-on-first-run
+    ##
+    database: bitnami_wordpress
+    username: bn_wordpress
+    password: ""
+  primary:
+    ## Enable persistence using Persistent Volume Claims
+    ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+    ##
+    persistence:
+      enabled: true
+      ## mariadb data Persistent Volume Storage Class
+      ## If defined, storageClassName: <storageClass>
+      ## If set to "-", storageClassName: "", which disables dynamic provisioning
+      ## If undefined (the default) or set to null, no storageClassName spec is
+      ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+      ##   GKE, AWS & OpenStack)
+      ##
+      # storageClass: "-"
+      accessModes:
+        - ReadWriteOnce
+      size: 8Gi
+
+##
+## External Database Configuration
+##
+## All of these values are only used when mariadb.enabled is set to false
+##
+externalDatabase:
+  ## Database host
+  ##
+  host: localhost
+  ## non-root Username for Wordpress Database
+  ##
+  user: bn_wordpress
+  ## Database password
+  ##
+  password: ""
+  ## Database name
+  ##
+  database: bitnami_wordpress
+  ## Database port number
+  ##
+  port: 3306
+  ## Use existing secret (ignores previous password)
+  ## must contain key `mariadb-password`
+  ## NOTE: When it's set, the `externalDatabase.password` parameter is ignored
+  ##
+  # existingSecret:
+
+## Make use of custom post-init.d user scripts functionality inside the bitnami/wordpress image
+## ref: https://github.com/bitnami/bitnami-docker-wordpress/tree/master/5/debian-10/rootfs/post-init.d
+##
+## The logic of the post-init.d user scripts is that all is all files with extensions .sh, .sql or .php are executed for one time only, at the very first initialization of the pod as the very last step of entrypoint.sh.
+## Example:
+## customPostInitScripts:
+##   enable-multisite.sh: |
+##     #!/bin/bash
+##     chmod +w /bitnami/wordpress/wp-config.php
+##     wp core multisite-install --url=example.com --title="Welcome to the WordPress Multisite" --admin_user="doesntmatternotreallyused" --admin_password="doesntmatternotreallyused" --admin_email="user@example.com"
+##     cat /docker-entrypoint-init.d/.htaccess > /bitnami/wordpress/.htaccess
+##     chmod -w bitnami/wordpress/wp-config.php
+##   .htaccess: |
+##     RewriteEngine On
+##     RewriteBase /
+##     ...
+##
+## NOTE: Combined with extraVolume and extraVolumeMounts to mount the configmap to /docker-entrypoint-init.d where custom user init scripts are looked for
+customPostInitScripts: {}
+
+
+root@Master:/home/ubuntu# kubectl create namespace nswordpress
+namespace/nswordpress created
+root@Master:/home/ubuntu# kubectl get namespace
+NAME              STATUS   AGE
+default           Active   2d14h
+kube-node-lease   Active   2d14h
+kube-public       Active   2d14h
+kube-system       Active   2d14h
+nswordpress       Active   9s
+root@Master:/home/ubuntu# helm install wordpress bitnami/wordpress --values=wordpress-values.yaml --namespace nswordpress --version 10.0.3
+NAME: wordpress
+LAST DEPLOYED: Thu Dec 31 12:36:28 2020
+NAMESPACE: nswordpress
+STATUS: deployed
+REVISION: 1
+NOTES:
+** Please be patient while the chart is being deployed **
+
+Your WordPress site can be accessed through the following DNS name from within your cluster:
+
+    wordpress.nswordpress.svc.cluster.local (port 80)
+
+To access your WordPress site from outside the cluster follow the steps below:
+
+1. Get the WordPress URL by running these commands:
+
+  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+        Watch the status with: 'kubectl get svc --namespace nswordpress -w wordpress'
+
+   export SERVICE_IP=$(kubectl get svc --namespace nswordpress wordpress --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}")
+   echo "WordPress URL: http://$SERVICE_IP/"
+   echo "WordPress Admin URL: http://$SERVICE_IP/admin"
+
+2. Open a browser and access WordPress using the obtained URL.
+
+3. Login with the following credentials below to see your blog:
+
+  echo Username: user
+  echo Password: $(kubectl get secret --namespace nswordpress wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+root@Master:/home/ubuntu# 
