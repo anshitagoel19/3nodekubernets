@@ -1,0 +1,485 @@
+Last login: Tue Dec 29 04:04:58 on ttys004
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MacBook-Air:~ anshitagoel$ ssh ubuntu@52.149.196.225
+ubuntu@52.149.196.225's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec 29 09:05:53 UTC 2020
+
+  System load:  0.15               Processes:              145
+  Usage of /:   10.8% of 28.90GB   Users logged in:        0
+  Memory usage: 12%                IP address for eth0:    10.0.0.4
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+4 packages can be updated.
+0 updates are security updates.
+
+New release '20.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Mon Dec 28 22:35:17 2020 from 116.74.25.198
+ubuntu@Master:~$ sudo su
+root@Master:/home/ubuntu# ssd ubuntu@13.84.213.56
+
+Command 'ssd' not found, but there are 23 similar ones.
+
+root@Master:/home/ubuntu# ssh ubuntu@13.84.213.56
+The authenticity of host '13.84.213.56 (13.84.213.56)' can't be established.
+ECDSA key fingerprint is SHA256:mN8fv9LRGAiAX6Dj3hDR1RjAIQFhu93JSNS0BOkvusM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '13.84.213.56' (ECDSA) to the list of known hosts.
+ubuntu@13.84.213.56's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec 29 09:08:13 UTC 2020
+
+  System load:  0.0               Processes:           117
+  Usage of /:   4.1% of 28.90GB   Users logged in:     0
+  Memory usage: 3%                IP address for eth0: 10.0.1.6
+  Swap usage:   0%
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@worker01:~$ sudo so
+sudo: so: command not found
+ubuntu@worker01:~$ sudo su
+root@worker01:/home/ubuntu# apt-get update && apt-get install -y docker.io
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:5 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]        
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]           
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]    
+Get:8 http://azure.archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [1790 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [376 kB]
+Get:11 http://azure.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [206 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [27.9 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1697 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [357 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [35.6 kB]
+Get:16 http://azure.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [7180 B]
+Get:17 http://azure.archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [10.0 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [4764 B]
+Get:19 http://azure.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [10.3 kB]
+Get:20 http://azure.archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [4588 B]
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [1453 kB]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [284 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [185 kB]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [24.3 kB]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1094 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [244 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [12.8 kB]
+Get:28 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [2872 B]
+Fetched 21.8 MB in 5s (4695 kB/s)                           
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  bridge-utils cgroupfs-mount containerd pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools debootstrap docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils cgroupfs-mount containerd docker.io pigz runc ubuntu-fan
+0 upgraded, 7 newly installed, 0 to remove and 14 not upgraded.
+Need to get 63.7 MB of archives.
+After this operation, 319 MB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 bridge-utils amd64 1.5-15ubuntu1 [30.1 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 runc amd64 1.0.0~rc10-0ubuntu1~18.04.2 [2000 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 containerd amd64 1.3.3-0ubuntu1~18.04.2 [21.7 MB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 docker.io amd64 19.03.6-0ubuntu1~18.04.2 [39.9 MB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ubuntu-fan all 0.12.10 [34.7 kB]
+Fetched 63.7 MB in 1s (50.0 MB/s)      
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 58579 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.5-15ubuntu1_amd64.deb ...
+Unpacking bridge-utils (1.5-15ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../3-runc_1.0.0~rc10-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking runc (1.0.0~rc10-0ubuntu1~18.04.2) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../4-containerd_1.3.3-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking containerd (1.3.3-0ubuntu1~18.04.2) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../5-docker.io_19.03.6-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking docker.io (19.03.6-0ubuntu1~18.04.2) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../6-ubuntu-fan_0.12.10_all.deb ...
+Unpacking ubuntu-fan (0.12.10) ...
+Setting up runc (1.0.0~rc10-0ubuntu1~18.04.2) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up containerd (1.3.3-0ubuntu1~18.04.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up bridge-utils (1.5-15ubuntu1) ...
+Setting up ubuntu-fan (0.12.10) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+Setting up pigz (2.4-1) ...
+Setting up docker.io (19.03.6-0ubuntu1~18.04.2) ...
+Adding group `docker' (GID 116) ...
+Done.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+docker.service is a disabled or a static unit, not starting it.
+Processing triggers for systemd (237-3ubuntu10.43) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+root@worker01:/home/ubuntu# apt-get update && apt-get install -y apt-transport-https
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease                       
+Fetched 163 kB in 0s (392 kB/s)                                                
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Need to get 1696 B of archives.
+After this operation, 153 kB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12ubuntu0.2 [1696 B]
+Fetched 1696 B in 0s (0 B/s)                  
+Selecting previously unselected package apt-transport-https.
+(Reading database ... 58910 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_1.6.12ubuntu0.2_all.deb ...
+Unpacking apt-transport-https (1.6.12ubuntu0.2) ...
+Setting up apt-transport-https (1.6.12ubuntu0.2) ...
+root@worker01:/home/ubuntu# curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+OK
+root@worker01:/home/ubuntu# cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+> deb https://apt.kubernetes.io/ kubernetes-xenial main
+> EOF
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+root@worker01:/home/ubuntu# apt-get update
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease                    
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9383 B]      
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [43.3 kB]
+Fetched 52.7 kB in 1s (74.5 kB/s) 
+Reading package lists... Done
+root@worker01:/home/ubuntu# apt-get install -y kubelet kubeadm kubectl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  conntrack cri-tools kubernetes-cni socat
+The following NEW packages will be installed:
+  conntrack cri-tools kubeadm kubectl kubelet kubernetes-cni socat
+0 upgraded, 7 newly installed, 0 to remove and 14 not upgraded.
+Need to get 68.7 MB of archives.
+After this operation, 293 MB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 conntrack amd64 1:1.4.4+snapshot20161117-6ubuntu2 [30.6 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 socat amd64 1.7.3.2-2ubuntu2 [342 kB]
+Get:3 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.13.0-01 [8775 kB]
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 0.8.7-00 [25.0 MB]
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.20.1-00 [18.9 MB]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.20.1-00 [7948 kB]
+Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.20.1-00 [7708 kB]
+Fetched 68.7 MB in 3s (21.1 MB/s) 
+Selecting previously unselected package conntrack.
+(Reading database ... 58914 files and directories currently installed.)
+Preparing to unpack .../0-conntrack_1%3a1.4.4+snapshot20161117-6ubuntu2_amd64.deb ...
+Unpacking conntrack (1:1.4.4+snapshot20161117-6ubuntu2) ...
+Selecting previously unselected package cri-tools.
+Preparing to unpack .../1-cri-tools_1.13.0-01_amd64.deb ...
+Unpacking cri-tools (1.13.0-01) ...
+Selecting previously unselected package kubernetes-cni.
+Preparing to unpack .../2-kubernetes-cni_0.8.7-00_amd64.deb ...
+Unpacking kubernetes-cni (0.8.7-00) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../3-socat_1.7.3.2-2ubuntu2_amd64.deb ...
+Unpacking socat (1.7.3.2-2ubuntu2) ...
+Selecting previously unselected package kubelet.
+Preparing to unpack .../4-kubelet_1.20.1-00_amd64.deb ...
+Unpacking kubelet (1.20.1-00) ...
+Selecting previously unselected package kubectl.
+Preparing to unpack .../5-kubectl_1.20.1-00_amd64.deb ...
+Unpacking kubectl (1.20.1-00) ...
+Selecting previously unselected package kubeadm.
+Preparing to unpack .../6-kubeadm_1.20.1-00_amd64.deb ...
+Unpacking kubeadm (1.20.1-00) ...
+Setting up conntrack (1:1.4.4+snapshot20161117-6ubuntu2) ...
+Setting up kubernetes-cni (0.8.7-00) ...
+Setting up cri-tools (1.13.0-01) ...
+Setting up socat (1.7.3.2-2ubuntu2) ...
+Setting up kubelet (1.20.1-00) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+Setting up kubectl (1.20.1-00) ...
+Setting up kubeadm (1.20.1-00) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+root@worker01:/home/ubuntu# echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs"">> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+root@worker01:/home/ubuntu#  cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+# Note: This dropin only works with kubeadm and kubelet v1.11+
+[Service]
+Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf"
+Environment="KUBELET_CONFIG_ARGS=--config=/var/lib/kubelet/config.yaml"
+# This is a file that "kubeadm init" and "kubeadm join" generates at runtime, populating the KUBELET_KUBEADM_ARGS variable dynamically
+EnvironmentFile=-/var/lib/kubelet/kubeadm-flags.env
+# This is a file that the user can use for overrides of the kubelet args as a last resort. Preferably, the user should use
+# the .NodeRegistration.KubeletExtraArgs object in the configuration files instead. KUBELET_EXTRA_ARGS should be sourced from this file.
+EnvironmentFile=-/etc/default/kubelet
+ExecStart=
+ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS
+Environment=KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs
+root@worker01:/home/ubuntu# systemctl restart kubelet
+Warning: The unit file, source configuration file or drop-ins of kubelet.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+root@worker01:/home/ubuntu# systemctl daemon-reload
+root@worker01:/home/ubuntu# kubeadm join 10.0.0.4:6443 --token h5f4yg.ohh4d941d71bd6af \
+>     --discovery-token-ca-cert-hash sha256:12ea4109ff769eb9ecc3f270593e3983a39b27bd2bd28b8f1eb392b68f7f8e5f 
+[preflight] Running pre-flight checks
+	[WARNING Service-Docker]: docker service is not enabled, please run 'systemctl enable docker.service'
+	[WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
+[preflight] Reading configuration from the cluster...
+[preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Starting the kubelet
+[kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
+
+This node has joined the cluster:
+* Certificate signing request was sent to apiserver and a response was received.
+* The Kubelet was informed of the new secure connection details.
+
+Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
+
+root@worker01:/home/ubuntu# systemctl enable docker.service
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+root@worker01:/home/ubuntu# client_loop: send disconnect: Broken pipe
+MacBook-Air:~ anshitagoel$ ssh ubuntu@13.84.213.56
+The authenticity of host '13.84.213.56 (13.84.213.56)' can't be established.
+ECDSA key fingerprint is SHA256:mN8fv9LRGAiAX6Dj3hDR1RjAIQFhu93JSNS0BOkvusM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '13.84.213.56' (ECDSA) to the list of known hosts.
+ubuntu@13.84.213.56's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec 29 19:21:18 UTC 2020
+
+  System load:  0.0               Processes:              125
+  Usage of /:   7.6% of 28.90GB   Users logged in:        0
+  Memory usage: 5%                IP address for eth0:    10.0.1.6
+  Swap usage:   0%                IP address for docker0: 172.17.0.1
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+20 packages can be updated.
+16 updates are security updates.
+
+New release '20.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Tue Dec 29 09:08:14 2020 from 52.149.196.225
+ubuntu@worker01:~$ sudo su
+root@worker01:/home/ubuntu# APISERVER=$(kubectl config view -o jsonpath='{.clusters[0].cluster.server}')
+root@worker01:/home/ubuntu# kubectl config set-cluster kubernetes \
+>     --certificate-authority=/etc/kubernetes/pki/ca.crt \
+>     --embed-certs=true \
+>     --server=$APISERVER \
+>     --kubeconfig=cni.kubeconfig
+Cluster "kubernetes" set.
+root@worker01:/home/ubuntu# 
+root@worker01:/home/ubuntu# kubectl config set-credentials calico-cni \
+>     --client-certificate=cni.crt \
+>     --client-key=cni.key \
+>     --embed-certs=true \
+>     --kubeconfig=cni.kubeconfig
+error: could not stat client-certificate file cni.crt: stat cni.crt: no such file or directory
+root@worker01:/home/ubuntu# 
+root@worker01:/home/ubuntu# kubectl config set-context default \
+>     --cluster=kubernetes \
+>     --user=calico-cni \
+>     --kubeconfig=cni.kubeconfig
+Context "default" created.
+root@worker01:/home/ubuntu# 
+root@worker01:/home/ubuntu# kubectl config use-context default --kubeconfig=cni.kubeconfig
+Switched to context "default".
+root@worker01:/home/ubuntu# kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64| tr -d '\n')"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@worker01:/home/ubuntu# curl -L -o /opt/cni/bin/calico https://github.com/projectcalico/cni-plugin/releases/download/v3.14.0/calico-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   636  100   636    0     0   2930      0 --:--:-- --:--:-- --:--:--  2930
+100 37.7M  100 37.7M    0     0  31.4M      0  0:00:01  0:00:01 --:--:-- 81.7M
+root@worker01:/home/ubuntu# chmod 755 /opt/cni/bin/calico
+root@worker01:/home/ubuntu# curl -L -o /opt/cni/bin/calico-ipam https://github.com/projectcalico/cni-plugin/releases/download/v3.14.0/calico-ipam-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   641  100   641    0     0   3096      0 --:--:-- --:--:-- --:--:--  3096
+100 36.8M  100 36.8M    0     0  30.4M      0  0:00:01  0:00:01 --:--:-- 82.6M
+root@worker01:/home/ubuntu# chmod 755 /opt/cni/bin/calico-ipam
+root@worker01:/home/ubuntu# mkdir -p /etc/cni/net.d/
+root@worker01:/home/ubuntu# cp cni.kubeconfig /etc/cni/net.d/calico-kubeconfig
+root@worker01:/home/ubuntu# chmod 600 /etc/cni/net.d/calico-kubeconfig
+root@worker01:/home/ubuntu# cat > /etc/cni/net.d/10-calico.conflist <<EOF
+> {
+>   "name": "k8s-pod-network",
+>   "cniVersion": "0.3.1",
+>   "plugins": [
+>     {
+>       "type": "calico",
+>       "log_level": "info",
+>       "datastore_type": "kubernetes",
+>       "mtu": 1500,
+>       "ipam": {
+>           "type": "calico-ipam"
+>       },
+>       "policy": {
+>           "type": "k8s"
+>       },
+>       "kubernetes": {
+>           "kubeconfig": "/etc/cni/net.d/calico-kubeconfig"
+>       }
+>     },
+>     {
+>       "type": "portmap",
+>       "snat": true,
+>       "capabilities": {"portMappings": true}
+>     }
+>   ]
+> }
+> EOF
+root@worker01:/home/ubuntu# kubectl apply -f - <<EOF
+> kind: ClusterRole
+> apiVersion: rbac.authorization.k8s.io/v1
+> metadata:
+>   name: calico-cni
+> rules:
+>   # The CNI plugin needs to get pods, nodes, and namespaces.
+>   - apiGroups: [""]
+>     resources:
+>       - pods
+>       - nodes
+>       - namespaces
+>     verbs:
+>       - get
+>   # The CNI plugin patches pods/status.
+>   - apiGroups: [""]
+>     resources:
+>       - pods/status
+>     verbs:
+>       - patch
+>  # These permissions are required for Calico CNI to perform IPAM allocations.
+>   - apiGroups: ["crd.projectcalico.org"]
+>     resources:
+>       - blockaffinities
+>       - ipamblocks
+>       - ipamhandles
+>     verbs:
+>       - get
+>       - list
+>       - create
+>       - update
+>       - delete
+>   - apiGroups: ["crd.projectcalico.org"]
+>     resources:
+>       - ipamconfigs
+>       - clusterinformations
+>       - ippools
+>     verbs:
+>       - get
+>       - list
+> EOF
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+root@worker01:/home/ubuntu# kubectl create clusterrolebinding calico-cni --clusterrole=calico-cni --user=calico-cni
+error: failed to create clusterrolebinding: Post "http://localhost:8080/apis/rbac.authorization.k8s.io/v1/clusterrolebindings?fieldManager=kubectl-create": dial tcp 127.0.0.1:8080: connect: connection refused
+root@worker01:/home/ubuntu# curl -L -o /opt/cni/bin/calico https://github.com/projectcalico/cni-plugin/releases/download/v3.14.0/calico-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   636  100   636    0     0   4930      0 --:--:-- --:--:-- --:--:--  4892
+100 37.7M  100 37.7M    0     0  32.9M      0  0:00:01  0:00:01 --:--:-- 79.1M
+root@worker01:/home/ubuntu# chmod 755 /opt/cni/bin/calico
+root@worker01:/home/ubuntu# curl -L -o /opt/cni/bin/calico-ipam https://github.com/projectcalico/cni-plugin/releases/download/v3.14.0/calico-ipam-amd64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   641  100   641    0     0   5672      0 --:--:-- --:--:-- --:--:--  5672
+100 36.8M  100 36.8M    0     0  24.0M      0  0:00:01  0:00:01 --:--:-- 45.6M
+root@worker01:/home/ubuntu# chmod 755 /opt/cni/bin/calico-ipam
+root@worker01:/home/ubuntu# mkdir -p /etc/cni/net.d/
+root@worker01:/home/ubuntu# cp cni.kubeconfig /etc/cni/net.d/calico-kubeconfig
+root@worker01:/home/ubuntu# chmod 600 /etc/cni/net.d/calico-kubeconfig
+root@worker01:/home/ubuntu# cat > /etc/cni/net.d/10-calico.conflist <<EOF
+> {
+>   "name": "k8s-pod-network",
+>   "cniVersion": "0.3.1",
+>   "plugins": [
+>     {
+>       "type": "calico",
+>       "log_level": "info",
+>       "datastore_type": "kubernetes",
+>       "mtu": 1500,
+>       "ipam": {
+>           "type": "calico-ipam"
+>       },
+>       "policy": {
+>           "type": "k8s"
+>       },
+>       "kubernetes": {
+>           "kubeconfig": "/etc/cni/net.d/calico-kubeconfig"
+>       }
+>     },
+>     {
+>       "type": "portmap",
+>       "snat": true,
+>       "capabilities": {"portMappings": true}
+>     }
+>   ]
+> }
+> EOF
+root@worker01:/home/ubuntu# 
